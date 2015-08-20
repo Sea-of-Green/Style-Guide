@@ -1,0 +1,69 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.footer {
+  @include font(overlook);
+  color: $white;
+
+  a {
+    color: $white;
+  }
+  &__main-content {
+    width: 100vw;
+    background: $blue;
+  }
+  &__links {
+    padding: 2rem 0;
+  }
+  &__list {
+    list-style-type: none;
+  }
+  &__ribbon {
+    width: 100vw;
+    background: $blue-5;
+  }
+  &__info {
+    padding: 1rem 0;
+  }
+  &__copyright, &__logo, &__payment {
+  }
+  &__copyright {
+    padding-top: 1rem;
+  }
+  &__logo {
+    height: 50px;
+    width: auto;
+    fill: $white;
+  }
+  &__payment {
+  }
+  &__payment__badge {
+    background: $gray-2;
+    width: 50px;
+    height: 50px;
+    border: 0.25rem solid $blue-5;
+  }
+}
+
+.footer {
+  max-width:$measure!important;
+  margin:0 auto;
+  position: relative;
+  padding: 10px 0;
+  z-index: 3;
+  color: $gray-2;
+  text-align: center;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+  .copyright {
+    margin: 20px 0 0;
+  }
+  .info {
+    margin: 5px 0 55px;
+    a {
+      color: $gray-2;
+    }
+  }
+}

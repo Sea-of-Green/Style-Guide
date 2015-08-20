@@ -1,0 +1,220 @@
+// INPUT BARS
+// ==========
+// User input with inline submit button. Notice that the bar is the full width of the container.
+// Default:
+// <div class="input-bar">
+//   <input placeholder="An Input Bar" />
+//   <button></button>
+// </div>
+// Blue Email Bar:
+// <div class="input input-bar--blue input-bar--email">
+//   <input placeholder="Sign Up for Our Newsletter" />
+//   <button></button>
+// </div>
+// http://codepen.io/lowmess/full/waRoeB/
+
+
+.input-bar {
+  @include clearfix;
+
+  width: 100%;
+  max-width: $measure;
+  margin: 0 auto;
+
+  input {
+    float: left;
+
+    width: calc(100% - 60px);
+    height: 2.75rem;
+    padding: 0.75rem 1rem;
+
+    border-radius: 7px;
+    border: 1px solid $gray;
+    border-right: none;
+
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    background: $gray-1;
+    color: $gray-5;
+
+    &::placeholder {
+      color: $gray;
+    }
+  }
+
+  button {
+    float: left;
+
+    width: 60px;
+    height: 2.75rem;
+    padding: 0.5rem 1rem;
+
+    border-radius: 7px;
+    border: 1px solid $gray;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    background: $gray-1;
+    background: linear-gradient(to bottom, $gray-1, darken($gray-1, 1%));
+    color: $gray;
+
+    &:after {
+      @include font(symbol);
+
+      content: '\f0da'; // caret right
+      
+      font-size: $h3-font-size;
+    }
+
+    @include on-event {
+      color: $gray-5;
+      background: $gray;
+      background: linear-gradient(to bottom, $gray-1, $gray);
+    }
+  }
+}
+
+.input-bar--blue {
+  input {
+    border-color: $blue;
+
+    background: $blue-1;
+    color: $blue-5;
+
+    &::placeholder {
+      color: $blue;
+    }
+  }
+
+  button {
+    border-color: $blue;
+
+    background: $blue-1;
+    background: linear-gradient(to bottom, $blue-1, darken($blue-1, 1%));
+    color: $blue;
+
+    @include on-event {
+      color: $blue-5;
+      background: $blue;
+      background: linear-gradient(to bottom, $blue-1, $blue);
+    }
+  }
+}
+
+.input-bar--success {
+  input {
+    border-color: $green;
+
+    background: $green-1;
+    color: $green-5;
+
+    &::placeholder {
+      color: $green;
+    }
+  }
+
+  button {
+    border-color: $green;
+
+    background: $green-1;
+    background: linear-gradient(to bottom, $green-1, darken($green-1, 1%));
+    color: $green;
+
+    &:after {
+      content: '\f00c'; // check mark
+    }
+
+    @include on-event {
+      color: $green-5;
+      background: $green;
+      background: linear-gradient(to bottom, $green-1, $green);
+    }
+  }
+}
+
+.input-bar--warning {
+  input {
+    border-color: $warning;
+
+    background: lighten($warning, 30%);
+    color: darken($warning, 10%);
+
+    &::placeholder {
+      color: $warning;
+    }
+  }
+
+  button {
+    border-color: $warning;
+
+    background: lighten($warning, 30%);
+    background: linear-gradient(to bottom, lighten($warning, 30%), lighten($warning, 31%));
+    color: darken($warning, 10%);
+
+    &:after {
+      content: '\f12a'; // exclamation point
+    }
+
+    @include on-event {
+      color: darken($warning, 10%);
+      background: $warning;
+      background: linear-gradient(to bottom, lighten($warning, 30%), $warning);
+    }
+  }
+}
+
+.input-bar--fail {
+  input {
+    border-color: $fail;
+
+    background: lighten($fail, 25%);
+    color: darken($fail, 20%);
+
+    &::placeholder {
+      color: $fail;
+    }
+  }
+
+  button {
+    border-color: $fail;
+
+    background: lighten($fail, 25%);
+    background: linear-gradient(to bottom, lighten($fail, 25%), lighten($fail, 24%));
+    color: $fail;
+
+    &:after {
+      content: '\f071'; // warning sign (exclamation point in triangle)
+    }
+
+    @include on-event {
+      color: darken($fail, 20%);
+      background: $fail;
+      background: linear-gradient(to bottom, lighten($fail, 25%), $fail);
+    }
+  }
+}
+
+.input-bar--search {
+  button {
+    &:after {
+      content: '\f002'; // magnifying glass
+    }
+  }
+}
+
+.input-bar--email {
+  button {
+    &:after {
+      content: '\f0e0'; // envelope
+    }
+  }
+}
+
+.input-bar--send {
+  button {
+    &:after {
+      content: '\f1d8'; // paper airplane
+    }
+  }
+}
