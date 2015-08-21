@@ -1,2 +1,4 @@
 # Sea-of-Green-Boilerplate
-Sass Boilerplate for Sea of Green projects
+Boilerplate for Sea of Green projects.
+
+Includes SASS & image files and a very basic homepage.

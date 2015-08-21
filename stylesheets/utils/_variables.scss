@@ -103,7 +103,8 @@ $symbol: 'Font Awesome', FontAwesome;
 // GRID SETTINGS
 // =============
 
-$gutter: $base-font-size;
+$gutter: $base-font-size !global;
+$max-width: $measure !global;
 
 // ============
 // LISTS & MAPS
@@ -123,6 +124,8 @@ $breakpoints:
 
 // Z-INDEX
 // =======
+// A running list of z-indexii. Used with @function z.
+
 $zindex: (
   background: 0,
   nav: 1000
@@ -131,7 +134,7 @@ $zindex: (
 // FONTS
 // =====
 // Font grouping for shorthand calls. Use with the 'font' mixin to call a font, e.g.:
-// .component { @include font(overlook, bold-italic); }
+// .component { @include font(heading-text, bold-italic); }
 
 $font-stack:
 

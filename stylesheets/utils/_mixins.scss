@@ -2,10 +2,11 @@
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
 
-/// Event wrapper
-/// @author Harry Roberts
-/// @param {Bool} $self [false] - Whether or not to include current selector
-/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+// EVENT WRAPPER
+// =============
+// @author Harry Roberts
+// @param {Bool} $self [false] - Whether or not to include current selector
+// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
 @mixin on-event($self: false) {
   @if $self {
     &,
@@ -23,19 +24,24 @@
   }
 }
 
-/// Make a context based selector a little more friendly
-/// @author Hugo Giraudel
-/// @param {String} $context
+// CONTEXT SELECTOR
+// ================
+// Make a context based selector a little more friendly
+// @author Hugo Giraudel
+// @param {String} $context
+
 @mixin when-inside($context) {
   #{$context} & {
     @content;
   }
 }
 
-/// Responsive manager
-/// @param {String} $breakpoint - Breakpoint
-/// @requires $breakpoints
-/// @link http://sass-guidelin.es/#breakpoint-manager Sass Guidelines - Breakpoint Manager
+// BREAKPOINT MANAGER
+// ==================
+// @param {String} $breakpoint - Breakpoint
+// @requires $breakpoints
+// @link http://sass-guidelin.es/#breakpoint-manager Sass Guidelines - Breakpoint Manager
+
 @mixin respond-to($breakpoint) {
   $query: map-get($breakpoints, $breakpoint);
 
@@ -50,9 +56,12 @@
 
 // GET FONTS
 // =========
-// Get font based on family & weight combo.
+// Retrieves font based on group & id combo.
 // @author hmphry
-// http://hmphry.com/useful-sass-mixins
+// @param {String} $group - the name of the group of fonts to iterate over
+// @param {String} $id - the weight of the font or specific instance of $group
+// @requires $font-sack
+// @link http://hmphry.com/useful-sass-mixins
 
 @mixin font($group, $id:regular){
   @each $font in $font-stack{

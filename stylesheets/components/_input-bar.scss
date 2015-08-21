@@ -1,5 +1,6 @@
-// INPUT BARS
-// ==========
+// -----------------------------------------------------------------------------
+// This file contains styles for the input-bar component.
+// -----------------------------------------------------------------------------
 // User input with inline submit button. Notice that the bar is the full width of the container.
 // Default:
 // <div class="input-bar">
@@ -63,7 +64,7 @@
       @include font(symbol);
 
       content: '\f0da'; // caret right
-      
+
       font-size: $h3-font-size;
     }
 
