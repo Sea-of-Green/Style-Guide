@@ -113,14 +113,14 @@ $max-width: $measure !global;
 // BREAKPOINTS
 // ===========
 
-$breakpoints:
+$breakpoints: (
   small: "(max-width: 39.9rem)",
   medium: "(min-width: 40rem)",
   large: "(min-width: 64rem)",
   not-large: "(max-width: 63.9rem)",
   xlarge: "(min-width: 90rem)",
   huge: "(min-width: 120rem)"
-;
+);
 
 // Z-INDEX
 // =======
