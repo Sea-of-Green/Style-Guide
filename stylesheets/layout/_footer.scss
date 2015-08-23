@@ -3,21 +3,64 @@
 // -----------------------------------------------------------------------------
 // HTML:
 // <footer>
-//   <div class="footer-content">...</div>
+//   <div class="footer__content">...</div>
 // </footer>
 
+// General footer styles
 footer {
   @include fill-parent;
+  @include font(heading-text);
+
+  margin-top: $gutter;
+  padding: $gutter 0 $h3-font-size 0;
+
   background: $blue;
   background: linear-gradient(to bottom, $blue, $blue-5);
   color: $white;
   a {
     color: $white;
+    &:visited {
+      color: $white;
+    }
     &:hover {
       color: $blue-1;
+      border: none;
     }
   }
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
 }
-.footer-content {
+.footer__content {
   @include outer-container;
+  padding: 0 $gutter;
+}
+
+// Specific footer styles
+.footer {
+  &__lists {
+    @include row;
+  }
+  &__list {
+    @include span-columns(4);
+    @include omega(3n);
+  }
+  &__social {
+    @include row;
+    margin: $h2-font-size 0;
+  }
+  &__social-icons {
+    @include span-columns(6);
+    font-size: $h3-font-size;
+    li {
+      display: inline-block;
+      margin-right: $h3-font-size;
+    }
+  }
+  &__newsletter-signup {
+    @include span-columns(6);
+    @include omega;
+  }
 }

@@ -20,7 +20,7 @@
   color: $white;
   border-color: $blue-5;
 
-  transition: all 0.2s ease;
+  transition: background 0.2s ease;
 
   &:after {
     @include font(symbol);

@@ -39,23 +39,68 @@
   </head>
   <body>
 
+    <main role="content">
+      <h1>Sea of Green Boilerplate</h1>
+      <p>This project is a set of files with which to start your Sea of Green web projects. It includes the baseline Sass files to start a project as well as favicons, logos, and this very homepage (which is a great start to your <code>HTML</code> as well).</p>
+      <h2>Stylesheets</h2>
+      <p>Sea of Green uses <a href="//sass-lang.com">Sass</a> for stylesheets. We use a 6-1 architecture based on <a href="//sass-guidelin.es/#architecture">Sass Guidelines</a>. Currently, we use <a href="">PrePros</a> for compilation &amp; compression, though we will be moving to a <a href="//gulpjs.com">Gulp</a> setup shortly.</p>
+      <h2>Logos &amp; Favicons</h2>
+      <p>In the <code>/assets</code> directory, you will find the logos for Sea of Green, Hands-on Hydro, and the Green Member program. All logos &amp; lockups are available as <code>.png</code>s with transparency as well as vector formats (<code>.ai</code> &amp; <code>.svg</code>).</p>
+      <p>The <code>/images</code> contains an ungodly amount of favicons as well as an <code>.svg</code> file that contains all Sea of Green &amp; Green Member logos as <code>SVG</code> symbols.</p>
+    </main>
+
     <footer>
-      <div class="footer-content">
-        <div class="footer-list">
-          <h3>Sea of Green Online</h3>
-          <ul>
-            <li><a href="//sea-of-green.com">Shop</a></li>
-            <li><a href="//handsonhydro.tumblr.com">Hands-on Hydro</a></li>
-          </ul>
-        </div>
-          <div class="footer-list">
-            <h3>Connect With Us</h3>
+      <div class="footer__content">
+        <div class="footer__lists">
+          <div class="footer__list">
+            <h3>Sea of Green Online</h3>
             <ul>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li><a href="//sea-of-green.com">Shop</a></li>
+              <li><a href="//handsonhydro.tumblr.com">Hands-on Hydro</a></li>
             </ul>
           </div>
+          <div class="footer__list">
+            <h3>Footer List</h3>
+            <ul>
+              <li><a href="#">Footer Item</a></li>
+              <li><a href="#">Footer Item</a></li>
+              <li><a href="#">Footer Item</a></li>
+            </ul>
+          </div>
+          <div class="footer__list">
+            <h3>Footer List</h3>
+            <ul>
+              <li><a href="#">Footer Item</a></li>
+              <li><a href="#">Footer Item</a></li>
+              <li><a href="#">Footer Item</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__social">
+          <ul class="footer__social-icons">
+            <li><a href="//facebook.com/"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="//twitter.com/seaofgreenhydro"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="//instagram.com/seaofgreenhydro"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="//plus.google.com/"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="//handsonhydro.tumblr.com"><i class="fa fa-tumblr"></i></a></li>
+          </ul>
+          <div class="footer__newsletter-signup input-bar input-bar--blue input-bar--email">
+            <input type="email" placeholder="Sign Up for Our Newsletter" id="footer__newsletter-signup-input" />
+            <button type="submit" onClick="newsletterSignup()"></button>
+          </div>
+        </div>
+        <div class="footer__info">
+          <p class="footer__copyright">&copy; 1992 &ndash; <span id="footer__copyright-year"></span> Sea of Green Hydrogardens</p>
+        </div>
       </div>
+    </footer>
+    <script>
+      function newsletterSignup() {
+        var email = document.getElementById("footer__newsletter-signup-input").value;
+        window.location.replace("http://sea-of-green.us7.list-manage2.com/subscribe?u=fdddde00588b5c6e72568d831&id=878c26efbd&MERGE0="+email);
+      }
+      var year = new Date().getFullYear();
+      document.getElementById("footer__copyright-year").innerHTML = year;
+    </script>
   </body>
 </html>

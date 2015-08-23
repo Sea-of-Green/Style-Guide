@@ -6,7 +6,7 @@
 // ===================
 
 body {
-  @include font(droid);
+  @include font(body-text);
 
   font-size: $base-font-size;
   line-height: $base-line-height;
@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-  @include font(overlook, bold);
+  @include font(heading-text, bold);
 
   font-size: $h1-font-size;
   line-height: $h1-line-height;
@@ -27,10 +27,10 @@ h1 {
 
   text-transform: capitalize;
   color: $blue;
-  letter-spacing: -0.05rem;
+  letter-spacing: -0.025em;
 }
 h2 {
-  @include font(overlook, bold);
+  @include font(heading-text, bold);
 
   font-size: $h2-font-size;
   line-height: $h2-line-height;
@@ -41,13 +41,14 @@ h2 {
   }
 
   text-transform: capitalize;
-  letter-spacing: -0.05rem;
+  letter-spacing: -0.025em;
 }
 h3 {
-  @include font(overlook, bold);
+  @include font(heading-text, medium);
 
   font-size: $h3-font-size;
   line-height: $h3-line-height;
+  letter-spacing: 0.01em;
 
   @include respond-to(medium) {
     font-size: $lg-h3-font-size;
@@ -57,6 +58,8 @@ h3 {
   text-transform: capitalize;
 }
 h4, h5, h6 {
+  @include font(heading-text, medium);
+
   font-size: $h4-font-size;
   line-height: $h4-line-height;
 
@@ -66,19 +69,13 @@ h4, h5, h6 {
   }
 }
 h4 {
-  @include font(overlook, bold);
-
   text-transform: capitalize;
 }
 h5 {
-  @include font(overlook, medium);
-
   text-transform: uppercase;
 }
 h6 {
-  @include font(overlook, medium);
-
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
 }
 p, ul, ol, pre, table, blockquote {
