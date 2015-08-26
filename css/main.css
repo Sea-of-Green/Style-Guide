@@ -844,8 +844,8 @@ footer ul {
   font-style: normal;
   padding: 0.75rem 1.75rem;
   background: #0091b2;
-  background: -webkit-linear-gradient(top, #0091b2, #008dad);
-  background: linear-gradient(to bottom, #0091b2, #008dad);
+  background: -webkit-linear-gradient(top, #0091b2, #0091b2);
+  background: linear-gradient(to bottom, #0091b2, #0091b2);
   border-radius: 7px;
   border: 1px solid;
   color: #ffffff;
@@ -867,15 +867,21 @@ button:hover,
 .btn:active,
 button:active,
 .btn:focus, button:focus {
-  background: #005c82;
+  background: #007197;
   background: -webkit-linear-gradient(top, #0091b2, #005c82);
   background: linear-gradient(to bottom, #0091b2, #005c82);
 }
 
+.btn:active, button:active {
+  background: #005c82;
+  background: -webkit-linear-gradient(top, #005c82, #005c82);
+  background: linear-gradient(to bottom, #005c82, #005c82);
+}
+
 .btn--white {
   background: #ffffff;
-  background: -webkit-linear-gradient(top, #ffffff, #fcfcfc);
-  background: linear-gradient(to bottom, #ffffff, #fcfcfc);
+  background: -webkit-linear-gradient(top, #ffffff, #ffffff);
+  background: linear-gradient(to bottom, #ffffff, #ffffff);
   color: #0091b2;
   border-color: #e5e1db;
 }
@@ -888,10 +894,16 @@ button:active,
   background: linear-gradient(to bottom, #ffffff, #e5e1db);
 }
 
+.btn--white:active {
+  background: #e5e1db;
+  background: -webkit-linear-gradient(top, #e5e1db, #e5e1db);
+  background: linear-gradient(to bottom, #e5e1db, #e5e1db);
+}
+
 .btn--success {
   background: #77bc1f;
-  background: -webkit-linear-gradient(top, #77bc1f, #74b81e);
-  background: linear-gradient(to bottom, #77bc1f, #74b81e);
+  background: -webkit-linear-gradient(top, #77bc1f, #77bc1f);
+  background: linear-gradient(to bottom, #77bc1f, #77bc1f);
   color: #ffffff;
   border-color: #648b1a;
 }
@@ -899,15 +911,21 @@ button:active,
 .btn--success:hover,
 .btn--success:active,
 .btn--success:focus {
-  background: #648b1a;
+  background: #62a60a;
   background: -webkit-linear-gradient(top, #77bc1f, #648b1a);
   background: linear-gradient(to bottom, #77bc1f, #648b1a);
 }
 
+.btn--success:active {
+  background: #648b1a;
+  background: -webkit-linear-gradient(top, #648b1a, #648b1a);
+  background: linear-gradient(to bottom, #648b1a, #648b1a);
+}
+
 .btn--warning {
   background: #dba900;
-  background: -webkit-linear-gradient(top, #dba900, #d6a500);
-  background: linear-gradient(to bottom, #dba900, #d6a500);
+  background: -webkit-linear-gradient(top, #dba900, #dba900);
+  background: linear-gradient(to bottom, #dba900, #dba900);
   color: #ffffff;
   border-color: #a88200;
 }
@@ -915,15 +933,21 @@ button:active,
 .btn--warning:hover,
 .btn--warning:active,
 .btn--warning:focus {
-  background: #a88200;
+  background: #c29500;
   background: -webkit-linear-gradient(top, #dba900, #a88200);
   background: linear-gradient(to bottom, #dba900, #a88200);
 }
 
+.btn--warning:active {
+  background: #a88200;
+  background: -webkit-linear-gradient(top, #a88200, #a88200);
+  background: linear-gradient(to bottom, #a88200, #a88200);
+}
+
 .btn--fail {
   background: #ff4337;
-  background: -webkit-linear-gradient(top, #ff4337, #ff3e32);
-  background: linear-gradient(to bottom, #ff4337, #ff3e32);
+  background: -webkit-linear-gradient(top, #ff4337, #ff4337);
+  background: linear-gradient(to bottom, #ff4337, #ff4337);
   color: #ffffff;
   border-color: #d00c00;
 }
@@ -931,9 +955,15 @@ button:active,
 .btn--fail:hover,
 .btn--fail:active,
 .btn--fail:focus {
-  background: #d00c00;
+  background: #ff1304;
   background: -webkit-linear-gradient(top, #ff4337, #d00c00);
   background: linear-gradient(to bottom, #ff4337, #d00c00);
+}
+
+.btn--fail:active {
+  background: #d00c00;
+  background: -webkit-linear-gradient(top, #d00c00, #d00c00);
+  background: linear-gradient(to bottom, #d00c00, #d00c00);
 }
 
 .input-bar {
@@ -949,7 +979,6 @@ button:active,
 
 .input-bar input {
   float: left;
-  width: -webkit-calc(100% - 60px);
   width: calc(100% - 60px);
   height: 2.75rem;
   padding: 0.75rem 1rem;
@@ -988,8 +1017,8 @@ button:active,
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   background: #e5e1db;
-  background: -webkit-linear-gradient(top, #e5e1db, #e3dfd8);
-  background: linear-gradient(to bottom, #e5e1db, #e3dfd8);
+  background: -webkit-linear-gradient(top, #e5e1db, #e5e1db);
+  background: linear-gradient(to bottom, #e5e1db, #e5e1db);
   color: #aea198;
 }
 
@@ -1005,9 +1034,15 @@ button:active,
 .input-bar button:active,
 .input-bar button:focus {
   color: #60504c;
-  background: #aea198;
+  background: #c1b8af;
   background: -webkit-linear-gradient(top, #e5e1db, #aea198);
   background: linear-gradient(to bottom, #e5e1db, #aea198);
+}
+
+.input-bar button:active {
+  background: #aea198;
+  background: -webkit-linear-gradient(top, #aea198, #aea198);
+  background: linear-gradient(to bottom, #aea198, #aea198);
 }
 
 .input-bar--blue input {
@@ -1035,8 +1070,8 @@ button:active,
 .input-bar--blue button {
   border-color: #0091b2;
   background: #76c3d4;
-  background: -webkit-linear-gradient(top, #76c3d4, #72c1d3);
-  background: linear-gradient(to bottom, #76c3d4, #72c1d3);
+  background: -webkit-linear-gradient(top, #76c3d4, #76c3d4);
+  background: linear-gradient(to bottom, #76c3d4, #76c3d4);
   color: #0091b2;
 }
 
@@ -1044,9 +1079,15 @@ button:active,
 .input-bar--blue button:active,
 .input-bar--blue button:focus {
   color: #005c82;
-  background: #0091b2;
+  background: #3ab0c8;
   background: -webkit-linear-gradient(top, #76c3d4, #0091b2);
   background: linear-gradient(to bottom, #76c3d4, #0091b2);
+}
+
+.input-bar--blue button:active {
+  background: #0091b2;
+  background: -webkit-linear-gradient(top, #0091b2, #0091b2);
+  background: linear-gradient(to bottom, #0091b2, #0091b2);
 }
 
 .input-bar--success input {
@@ -1074,8 +1115,8 @@ button:active,
 .input-bar--success button {
   border-color: #77bc1f;
   background: #b7dc78;
-  background: -webkit-linear-gradient(top, #b7dc78, #b5db74);
-  background: linear-gradient(to bottom, #b7dc78, #b5db74);
+  background: -webkit-linear-gradient(top, #b7dc78, #b7dc78);
+  background: linear-gradient(to bottom, #b7dc78, #b7dc78);
   color: #77bc1f;
 }
 
@@ -1087,9 +1128,15 @@ button:active,
 .input-bar--success button:active,
 .input-bar--success button:focus {
   color: #648b1a;
-  background: #77bc1f;
+  background: #a3d55d;
   background: -webkit-linear-gradient(top, #b7dc78, #77bc1f);
   background: linear-gradient(to bottom, #b7dc78, #77bc1f);
+}
+
+.input-bar--success button:active {
+  background: #77bc1f;
+  background: -webkit-linear-gradient(top, #77bc1f, #77bc1f);
+  background: linear-gradient(to bottom, #77bc1f, #77bc1f);
 }
 
 .input-bar--warning input {
@@ -1117,8 +1164,8 @@ button:active,
 .input-bar--warning button {
   border-color: #dba900;
   background: #ffdf75;
-  background: -webkit-linear-gradient(top, #ffdf75, #ffe17a);
-  background: linear-gradient(to bottom, #ffdf75, #ffe17a);
+  background: -webkit-linear-gradient(top, #ffdf75, #ffdf75);
+  background: linear-gradient(to bottom, #ffdf75, #ffdf75);
   color: #a88200;
 }
 
@@ -1130,9 +1177,15 @@ button:active,
 .input-bar--warning button:active,
 .input-bar--warning button:focus {
   color: #a88200;
-  background: #dba900;
+  background: #ffc80f;
   background: -webkit-linear-gradient(top, #ffdf75, #dba900);
   background: linear-gradient(to bottom, #ffdf75, #dba900);
+}
+
+.input-bar--warning button:active {
+  background: #dba900;
+  background: -webkit-linear-gradient(top, #dba900, #dba900);
+  background: linear-gradient(to bottom, #dba900, #dba900);
 }
 
 .input-bar--fail input {
@@ -1160,8 +1213,8 @@ button:active,
 .input-bar--fail button {
   border-color: #ff4337;
   background: #ffbbb6;
-  background: -webkit-linear-gradient(top, #ffbbb6, #ffb6b1);
-  background: linear-gradient(to bottom, #ffbbb6, #ffb6b1);
+  background: -webkit-linear-gradient(top, #ffbbb6, #ffbbb6);
+  background: linear-gradient(to bottom, #ffbbb6, #ffbbb6);
   color: #ff4337;
 }
 
@@ -1173,9 +1226,15 @@ button:active,
 .input-bar--fail button:active,
 .input-bar--fail button:focus {
   color: #d00c00;
-  background: #ff4337;
+  background: #ff736a;
   background: -webkit-linear-gradient(top, #ffbbb6, #ff4337);
   background: linear-gradient(to bottom, #ffbbb6, #ff4337);
+}
+
+.input-bar--fail button:active {
+  background: #ff4337;
+  background: -webkit-linear-gradient(top, #ff4337, #ff4337);
+  background: linear-gradient(to bottom, #ff4337, #ff4337);
 }
 
 .input-bar--search button:after {

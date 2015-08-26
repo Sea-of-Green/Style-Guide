@@ -1,4 +1,7 @@
-# Sea-of-Green-Boilerplate
-Boilerplate for Sea of Green projects.
+# Sea of Green Starter Kit
 
-Includes Sass & image files and a very basic homepage.
+***
+
+Starter kit for [Sea of Green](http://sea-of-green.com) web projects.
+
+Includes [Sass](http://sass-lang.com) & image files, a default [Gulp file](http://gulpjs.com), and a very basic homepage.
