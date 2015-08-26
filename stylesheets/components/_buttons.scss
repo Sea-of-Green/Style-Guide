@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 // Standard buttons have a slight vertical gradient on hover, that falls back to solid. By default they are blue, but they can be made a different color by including a modifier class, e.g.:
 // <button class="btn btn--success>Success</button>
-// Contain an extremely slight gradient to avoid paint flashes when hovered.
+// Contains extra linear-gradients to avoid paint flashes when hovered & active.
 // http://codepen.io/lowmess/full/WvYaZG/
 
 .btn {
@@ -12,7 +12,7 @@
   padding: $gutter*0.75 $gutter*1.75;
 
   background: $blue-3;
-  background: linear-gradient(to bottom, $blue-3, darken($blue-3, 1%));
+  background: linear-gradient(to bottom, $blue-3, $blue-3);
 
   border-radius: 7px;
   border: 1px solid;
@@ -31,13 +31,18 @@
   }
 
   @include on-event {
-    background: $blue-5;
+    background: $blue-4;
     background: linear-gradient(to bottom, $blue-3, $blue-5);
+  }
+
+  &:active {
+    background: $blue-5;
+    background: linear-gradient(to bottom, $blue-5, $blue-5);
   }
 
   &--white {
     background: $white;
-    background: linear-gradient(to bottom, $white, darken($white, 1%));
+    background: linear-gradient(to bottom, $white, $white);
 
     color: $blue;
     border-color: $gray-1;
@@ -46,44 +51,64 @@
       background: $gray-1;
       background: linear-gradient(to bottom, $white, $gray-1);
     }
+
+    &:active {
+      background: $gray-1;
+      background: linear-gradient(to bottom, $gray-1, $gray-1);
+    }
   }
 
   &--success {
     background: $green-3;
-    background: linear-gradient(to bottom, $green-3, darken($green-3, 1%));
+    background: linear-gradient(to bottom, $green-3, $green-3);
 
     color: $white;
     border-color: $green-5;
 
     @include on-event {
-      background: $green-5;
+      background: $green-4;
       background: linear-gradient(to bottom, $green-3, $green-5);
+    }
+
+    &:active {
+      background: $green-5;
+      background: linear-gradient(to bottom, $green-5, $green-5);
     }
   }
 
   &--warning {
     background: $warning;
-    background: linear-gradient(to bottom, $warning, darken($warning, 1%));
+    background: linear-gradient(to bottom, $warning, $warning);
 
     color: $white;
     border-color: darken($warning, 10%);
 
     @include on-event {
-      background: darken($warning, 10%);
+      background: darken($warning, 5%);
       background: linear-gradient(to bottom, $warning, darken($warning, 10%));
+    }
+
+    &:active {
+      background: darken($warning, 10%);
+      background: linear-gradient(to bottom, darken($warning, 10%), darken($warning, 10%));
     }
   }
 
   &--fail {
     background: $fail;
-    background: linear-gradient(to bottom, $fail, darken($fail, 1%));
+    background: linear-gradient(to bottom, $fail, $fail);
 
     color: $white;
     border-color: darken($fail, 20%);
 
     @include on-event {
-      background: darken($fail, 20%);
+      background: darken($fail, 10%);
       background: linear-gradient(to bottom, $fail, darken($fail, 20%));
+    }
+
+    &:active {
+      background: darken($fail, 20%);
+      background: linear-gradient(to bottom, darken($fail, 20%), darken($fail, 20%));
     }
   }
 }

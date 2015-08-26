@@ -30,7 +30,7 @@
     padding: 0.75rem 1rem;
 
     border-radius: 7px;
-    border: 1px solid $gray;
+    border: 1px solid $gray-3;
     border-right: none;
 
     border-top-right-radius: 0;
@@ -40,7 +40,7 @@
     color: $gray-5;
 
     &::placeholder {
-      color: $gray;
+      color: $gray-3;
     }
   }
 
@@ -53,13 +53,13 @@
     padding: .25rem 1rem 0.25rem 0.1rem;
 
     border-radius: 7px;
-    border: 1px solid $gray;
+    border: 1px solid $gray-3;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 
     background: $gray-1;
-    background: linear-gradient(to bottom, $gray-1, darken($gray-1, 1%));
-    color: $gray;
+    background: linear-gradient(to bottom, $gray-1, $gray-1);
+    color: $gray-3;
 
     &:after {
       @include font(symbol);
@@ -71,21 +71,26 @@
 
     @include on-event {
       color: $gray-5;
-      background: $gray;
-      background: linear-gradient(to bottom, $gray-1, $gray);
+      background: $gray-2;
+      background: linear-gradient(to bottom, $gray-1, $gray-3);
+    }
+
+    &:active {
+      background: $gray-3;
+      background: linear-gradient(to bottom, $gray-3, $gray-3);
     }
   }
 }
 
 .input-bar--blue {
   input {
-    border-color: $blue;
+    border-color: $blue-3;
 
     background: $blue-1;
     color: $blue-5;
 
     &::placeholder {
-      color: $blue;
+      color: $blue-3;
     }
   }
 
@@ -93,35 +98,40 @@
     border-color: $blue;
 
     background: $blue-1;
-    background: linear-gradient(to bottom, $blue-1, darken($blue-1, 1%));
+    background: linear-gradient(to bottom, $blue-1, $blue-1);
     color: $blue;
 
     @include on-event {
       color: $blue-5;
-      background: $blue;
-      background: linear-gradient(to bottom, $blue-1, $blue);
+      background: $blue-2;
+      background: linear-gradient(to bottom, $blue-1, $blue-3);
+    }
+
+    &:active {
+      background: $blue-3;
+      background: linear-gradient(to bottom, $blue-3, $blue-3);
     }
   }
 }
 
 .input-bar--success {
   input {
-    border-color: $green;
+    border-color: $green-3;
 
     background: $green-1;
     color: $green-5;
 
     &::placeholder {
-      color: $green;
+      color: $green-3;
     }
   }
 
   button {
-    border-color: $green;
+    border-color: $green-3;
 
     background: $green-1;
-    background: linear-gradient(to bottom, $green-1, darken($green-1, 1%));
-    color: $green;
+    background: linear-gradient(to bottom, $green-1, $green-1);
+    color: $green-3;
 
     &:after {
       content: '\f00c'; // check mark
@@ -129,8 +139,13 @@
 
     @include on-event {
       color: $green-5;
-      background: $green;
+      background: $green-2;
       background: linear-gradient(to bottom, $green-1, $green);
+    }
+
+    &:active {
+      background: $green-3;
+      background: linear-gradient(to bottom, $green-3, $green-3);
     }
   }
 }
@@ -151,7 +166,7 @@
     border-color: $warning;
 
     background: lighten($warning, 30%);
-    background: linear-gradient(to bottom, lighten($warning, 30%), lighten($warning, 31%));
+    background: linear-gradient(to bottom, lighten($warning, 30%), lighten($warning, 30%));
     color: darken($warning, 10%);
 
     &:after {
@@ -160,8 +175,13 @@
 
     @include on-event {
       color: darken($warning, 10%);
-      background: $warning;
+      background: lighten($warning, 10%);
       background: linear-gradient(to bottom, lighten($warning, 30%), $warning);
+    }
+
+    &:active {
+      background: $warning;
+      background: linear-gradient(to bottom, $warning, $warning);
     }
   }
 }
@@ -182,7 +202,7 @@
     border-color: $fail;
 
     background: lighten($fail, 25%);
-    background: linear-gradient(to bottom, lighten($fail, 25%), lighten($fail, 24%));
+    background: linear-gradient(to bottom, lighten($fail, 25%), lighten($fail, 25%));
     color: $fail;
 
     &:after {
@@ -191,8 +211,13 @@
 
     @include on-event {
       color: darken($fail, 20%);
-      background: $fail;
+      background: lighten($fail, 10%);
       background: linear-gradient(to bottom, lighten($fail, 25%), $fail);
+    }
+
+    &:active {
+      background: $fail;
+      background: linear-gradient(to bottom, $fail, $fail);
     }
   }
 }
