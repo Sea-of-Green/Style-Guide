@@ -41,26 +41,53 @@ footer {
 // Specific footer styles
 .footer {
   &__lists {
-    @include row;
+    text-align: center;
+    @include respond-to(small) {
+      @include row;
+
+      text-align: left;
+    }
   }
   &__list {
-    @include span-columns(4);
-    @include omega(3n);
+    @include respond-to(small) {
+      @include span-columns(4);
+      @include omega(3n);
+    }
   }
   &__social {
-    @include row;
-    margin: $h2-font-size 0;
+    @include respond-to(medium) {
+      @include row;
+      margin: $h2-font-size 0;
+    }
   }
   &__social-icons {
-    @include span-columns(6);
     font-size: $h3-font-size;
+    text-align: center;
+
+    @include respond-to(medium) {
+      @include span-columns(6);
+
+      text-align: left;
+    }
+
     li {
       display: inline-block;
       margin-right: $h3-font-size;
+      &:last-of-type {
+        margin-right: 0;
+      }
     }
   }
   &__newsletter-signup {
-    @include span-columns(6);
-    @include omega;
+    @include respond-to(medium) {
+      @include span-columns(6);
+      @include omega;
+    }
+  }
+  &__copyright {
+    text-align: center;
+    @include respond-to(small) {
+      text-align: left;
+    }
   }
 }

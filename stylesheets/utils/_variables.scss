@@ -86,7 +86,7 @@ $base-line-height: 1.75rem;
 
 $h1-line-height: $base-line-height * 2;
 
-$h1-line-height: $base-line-height * 2;
+$h2-line-height: $base-line-height * 2;
 
 $h3-line-height: $base-line-height;
 
@@ -118,7 +118,8 @@ $max-width: $measure !global;
 // ===========
 
 $breakpoints: (
-  small: "(max-width: 39.9rem)",
+  small: "(min-width: 30rem)",
+  is-small: "(max-width: 29.9rem)",
   medium: "(min-width: 40rem)",
   large: "(min-width: 64rem)",
   not-large: "(max-width: 63.9rem)",
