@@ -48,47 +48,51 @@ $fail: #ff4337;
 // ==========
 
 $modular-scale-base: 1rem;
+$measure: 50rem;
+
+// Small font sizes
 
 $modular-scale-ratio: $perfect-fourth;
 
 $base-font-size: modular-scale(0);
-$base-line-height: 1.75;
 
 $h1-font-size: modular-scale(3);
-$h1-line-height: 1.3;
 
 $h2-font-size: modular-scale(2);
-$h2-line-height: 1.45;
 
 $h3-font-size: modular-scale(1);
-$h3-line-height: 1.6;
 
 $h4-font-size: modular-scale(0);
-$h4-line-height: 1.75;
 
 $small-font-size: modular-scale(-1);
-$small-line-height: 0.5rem;
 
 // Large font sizes (for non-mobile viewports)
 
 $modular-scale-ratio: $augmented-fourth;
 
 $lg-h1-font-size: modular-scale(3);
-$lg-h1-line-height: 1.3;
 
 $lg-h2-font-size: modular-scale(2);
-$lg-h2-line-height: 1.45;
 
 $lg-h3-font-size: modular-scale(1);
-$lg-h3-line-height: 1.6;
 
 $lg-h4-font-size: modular-scale(0);
-$lg-h4-line-height: 1.75;
 
 $lg-small-font-size: modular-scale(-1);
-$lg-small-line-height: 0.5rem;
 
-$measure: 50rem;
+// Line Heights
+
+$base-line-height: 1.75rem;
+
+$h1-line-height: $base-line-height * 2;
+
+$h1-line-height: $base-line-height * 2;
+
+$h3-line-height: $base-line-height;
+
+$h4-line-height: $base-line-height;
+
+$small-line-height: $base-line-height * 0.5;
 
 
 // FONT-STACKS

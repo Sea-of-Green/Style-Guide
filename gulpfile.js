@@ -15,12 +15,15 @@ gulp.task('sass', function() {
 });
 
 gulp.task('min-css', ['sass'], function() {
-  return gulp.src('./css/main.css')
-    .pipe(rename('main.min.css'))
+  return gulp.src('./css/*.css')
+    .pipe(rename(function(path) {
+      path.basename += '.min';
+      path.extname = '.css';
+    }))
     .pipe(csso())
     .pipe(gulp.dest('./css'));
 });
 
-gulp.task('sass:watch', function () {
+gulp.task('watch', function () {
   gulp.watch('./stylesheets/*.scss', ['min-css']);
 });
