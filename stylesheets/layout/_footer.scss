@@ -22,7 +22,7 @@ footer {
     &:visited {
       color: $white;
     }
-    &:hover {
+    @include on-event {
       color: $blue-1;
       border: none;
     }

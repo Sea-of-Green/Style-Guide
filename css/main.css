@@ -669,17 +669,41 @@ a > h6:visited {
 }
 
 h1 > a:hover,
+h1 > a:active,
+h1 > a:focus,
 h2 > a:hover,
+h2 > a:active,
+h2 > a:focus,
 h3 > a:hover,
+h3 > a:active,
+h3 > a:focus,
 h4 > a:hover,
+h4 > a:active,
+h4 > a:focus,
 h5 > a:hover,
+h5 > a:active,
+h5 > a:focus,
 h6 > a:hover,
+h6 > a:active,
+h6 > a:focus,
 a > h1:hover,
+a > h1:active,
+a > h1:focus,
 a > h2:hover,
+a > h2:active,
+a > h2:focus,
 a > h3:hover,
+a > h3:active,
+a > h3:focus,
 a > h4:hover,
+a > h4:active,
+a > h4:focus,
 a > h5:hover,
-a > h6:hover {
+a > h5:active,
+a > h5:focus,
+a > h6:hover,
+a > h6:active,
+a > h6:focus {
   color: #005c82;
   border: none;
 }
@@ -715,7 +739,9 @@ footer a:visited {
   color: #ffffff;
 }
 
-footer a:hover {
+footer a:hover,
+footer a:active,
+footer a:focus {
   color: #76c3d4;
   border: none;
 }
@@ -847,8 +873,6 @@ footer ul {
   border: 1px solid;
   color: #ffffff;
   border-color: #005c82;
-  -webkit-transition: background 0.2s ease;
-          transition: background 0.2s ease;
 }
 
 .btn:after, button:after {
