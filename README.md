@@ -6,7 +6,7 @@ This project is a set of files with which to start your [Sea of Green](http://se
 
 In the <code>/assets</code> directory, you will find the logos for Sea of Green, [Hands-on Hydro](http://handsonhydro.tumblr.com), and the Green Member program. All logos &amp; lockups are available as <code>.png</code>s with transparency as well as vector formats (<code>.ai</code> &amp; <code>.svg</code>).
 
-The <code>/images</code> contains an ungodly amount of favicons as well as an <code>.svg</code> file that contains all Sea of Green &amp; Green Member logos as <code>SVG</code> symbols.
+The <code>/images</code> directory contains an ungodly amount of favicons as well as an <code>.svg</code> file that contains all Sea of Green &amp; Green Member logos as <code>SVG</code> symbols.
 
 ### Stylesheets
 
