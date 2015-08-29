@@ -12,11 +12,11 @@ gulp.task('sass', function() {
     .pipe(sass().on('error', sass.logError))
     .pipe(sass({outputStyle: 'expanded'}))
     .pipe(autoprefixer())
-    .pipe(gulp.dest('./dist/css'));
+    .pipe(gulp.dest('./src/css'));
 });
 
 gulp.task('min-css', ['sass'], function() {
-  return gulp.src('./dist/css/main.css')
+  return gulp.src('./src/css/*.css')
     .pipe(rename(function(path) {
       path.basename += '.min';
       path.extname = '.css';
