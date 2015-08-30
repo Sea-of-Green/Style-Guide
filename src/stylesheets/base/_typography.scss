@@ -201,34 +201,7 @@ a {
   }
 
   @include on-event {
-    border-bottom: 0.1rem solid currentColor;
-  }
-}
-
-// HEADER LINKS
-// ============
-
-h1 > a,
-h2 > a,
-h3 > a,
-h4 > a,
-h5 > a,
-h6 > a,
-a > h1,
-a > h2,
-a > h3,
-a > h4,
-a > h5,
-a > h6 {
-  text-decoration: none;
-  color: $blue;
-
-  &:visited {
-    color: $gray;
-  }
-
-  @include on-event {
-    color: $blue-5;
-    border: none;
+    color: $blue;
+    border-bottom: 0.1em solid currentColor;
   }
 }

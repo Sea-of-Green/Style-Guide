@@ -2,12 +2,6 @@
 // This file contains CSS helper classes.
 // -----------------------------------------------------------------------------
 
-// Clear inner floats
-
-.clearfix {
-  @include clearfix;
-}
-
 // Main content containers
 // 1. Make the container full-width with a maximum width
 // 2. Center it in the viewport

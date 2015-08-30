@@ -55,9 +55,12 @@ footer {
     }
   }
   &__social {
+    margin: $base-line-height*2 0;
+    @include respond-to(small) {
+      margin: $base-line-height 0;
+    }
     @include respond-to(medium) {
       @include row;
-      margin: $h2-font-size 0;
     }
   }
   &__social-icons {

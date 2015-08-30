@@ -34,6 +34,6 @@ gulp.task('typo', function() {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('./src/stylesheets/*.scss', ['min-css']);
+  gulp.watch(['./src/stylesheets/*.scss', './src/stylesheets/**/*.scss'], ['min-css']);
   gulp.watch('./src/*.html', ['typo']);
 });

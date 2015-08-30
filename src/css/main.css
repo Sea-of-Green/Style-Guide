@@ -634,84 +634,8 @@ a:visited {
 a:hover,
 a:active,
 a:focus {
-  border-bottom: 0.1rem solid currentColor;
-}
-
-h1 > a,
-h2 > a,
-h3 > a,
-h4 > a,
-h5 > a,
-h6 > a,
-a > h1,
-a > h2,
-a > h3,
-a > h4,
-a > h5,
-a > h6 {
-  text-decoration: none;
   color: #0091b2;
-}
-
-h1 > a:visited,
-h2 > a:visited,
-h3 > a:visited,
-h4 > a:visited,
-h5 > a:visited,
-h6 > a:visited,
-a > h1:visited,
-a > h2:visited,
-a > h3:visited,
-a > h4:visited,
-a > h5:visited,
-a > h6:visited {
-  color: #aea198;
-}
-
-h1 > a:hover,
-h1 > a:active,
-h1 > a:focus,
-h2 > a:hover,
-h2 > a:active,
-h2 > a:focus,
-h3 > a:hover,
-h3 > a:active,
-h3 > a:focus,
-h4 > a:hover,
-h4 > a:active,
-h4 > a:focus,
-h5 > a:hover,
-h5 > a:active,
-h5 > a:focus,
-h6 > a:hover,
-h6 > a:active,
-h6 > a:focus,
-a > h1:hover,
-a > h1:active,
-a > h1:focus,
-a > h2:hover,
-a > h2:active,
-a > h2:focus,
-a > h3:hover,
-a > h3:active,
-a > h3:focus,
-a > h4:hover,
-a > h4:active,
-a > h4:focus,
-a > h5:hover,
-a > h5:active,
-a > h5:focus,
-a > h6:hover,
-a > h6:active,
-a > h6:focus {
-  color: #005c82;
-  border: none;
-}
-
-.clearfix::after {
-  clear: both;
-  content: "";
-  display: table;
+  border-bottom: 0.1em solid currentColor;
 }
 
 nav {
@@ -799,10 +723,19 @@ footer ul {
   }
 }
 
+.footer__social {
+  margin: 3.5rem 0;
+}
+
+@media (min-width: 30rem) {
+  .footer__social {
+    margin: 1.75rem 0;
+  }
+}
+
 @media (min-width: 40rem) {
   .footer__social {
     display: block;
-    margin: 1.77689rem 0;
   }
   .footer__social::after {
     clear: both;
