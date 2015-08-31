@@ -110,12 +110,31 @@
       </div>
     </footer>
     <script>
+      // Send newsletter signup to Mailchimp
       function newsletterSignup() {
-        var email = document.getElementById("footer__newsletter-signup-input").value;
-        window.location.replace("http://sea-of-green.us7.list-manage2.com/subscribe?u=fdddde00588b5c6e72568d831&id=878c26efbd&MERGE0="+email);
+        var email = $("#footer__newsletter-signup-input").value;
+        var link = "http://sea-of-green.us7.list-manage2.com/subscribe?u=fdddde00588b5c6e72568d831&id=878c26efbd&MERGE0=";
+        window.location.replace(link+email);
       }
+
+      // Add Year to Copyright
       var year = new Date().getFullYear();
-      document.getElementById("footer__copyright-year").innerHTML = year;
+      $("#footer__copyright-year").text(year);
+
+      // Add 'utm_source=sea-of-green' to external links
+      // link: https://css-tricks.com/snippets/jquery/target-only-external-links/
+      var ref = "utm_source=sea-of-green";
+      $('a').each(function() {
+        var a = new RegExp('/' + window.location.host + '/');
+        if (!a.test(this.href)) {
+          var link = this.href;
+          if (link.search("/?") != -1 && link.search("=") != -1) {
+            this.href += '&' + ref;
+          } else {
+            this.href += '?' + ref;
+          }
+        }
+      });
     </script>
   </body>
 </html>
