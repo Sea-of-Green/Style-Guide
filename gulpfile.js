@@ -1,28 +1,29 @@
 var gulp = require('gulp');
+var merge = require('merge-stream');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var rename = require('gulp-rename');
 var csso = require('gulp-csso');
 var typogr = require('gulp-typogr');
 
-gulp.task('default', ['min-css', 'typo']);
+gulp.task('default', ['sass', 'typo']);
 
 gulp.task('sass', function() {
-  return gulp.src('./src/stylesheets/*.scss')
+  var nested = gulp.src('./src/stylesheets/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(sass({outputStyle: 'expanded'}))
+    .pipe(sass({outputStyle: 'nested'}))
     .pipe(autoprefixer())
     .pipe(gulp.dest('./src/css'));
-});
-
-gulp.task('min-css', ['sass'], function() {
-  return gulp.src('./src/css/*.css')
+  var compressed = gulp.src('./src/stylesheets/*.scss')
+    .pipe(sass())
+    .pipe(autoprefixer())
+    .pipe(csso())
     .pipe(rename(function(path) {
       path.basename += '.min';
       path.extname = '.css';
     }))
-    .pipe(csso())
     .pipe(gulp.dest('./dist/css'));
+  return merge(nested, compressed);
 });
 
 gulp.task('typo', function() {
@@ -34,6 +35,6 @@ gulp.task('typo', function() {
 });
 
 gulp.task('watch', function () {
-  gulp.watch(['./src/stylesheets/*.scss', './src/stylesheets/**/*.scss'], ['min-css']);
+  gulp.watch(['./src/stylesheets/*.scss', './src/stylesheets/**/*.scss'], ['sass']);
   gulp.watch('./src/*.html', ['typo']);
 });

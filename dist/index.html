@@ -109,10 +109,13 @@
         </div>
       </div>
     </footer>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       // Send newsletter signup to Mailchimp
       function newsletterSignup() {
-        var email = $("#footer__newsletter-signup-input").value;
+        var email = $("#footer__newsletter-signup-input").val();
         var link = "http://sea-of-green.us7.list-manage2.com/subscribe?u=fdddde00588b5c6e72568d831&id=878c26efbd&MERGE0=";
         window.location.replace(link+email);
       }
