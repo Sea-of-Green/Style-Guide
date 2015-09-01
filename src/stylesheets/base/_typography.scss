@@ -1,6 +1,7 @@
 // -----------------------------------------------------------------------------
 // This file contains typographic styles.
 // -----------------------------------------------------------------------------
+// link: http://codepen.io/lowmess/full/ZbzbMY
 
 // BODY TEXT & HEADERS
 // ===================
@@ -203,5 +204,9 @@ a {
   @include on-event {
     color: $blue;
     border-bottom: 0.1em solid currentColor;
+  }
+
+  &:active {
+    color: $blue-5;
   }
 }
