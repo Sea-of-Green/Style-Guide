@@ -1,0 +1,31 @@
+{
+  "name": "sea-of-green-starter-kit",
+  "version": "1.0.2",
+  "description": "Starter kit for Sea of Green related web projects",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.8.2",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-csso": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-typogr": "^1.0.0",
+    "gulp-uncss": "^1.0.3",
+    "merge-stream": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sea-of-Green/Sea-of-Green-Boilerplate.git"
+  },
+  "author": "Alec Lomas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sea-of-Green/Sea-of-Green-Boilerplate/issues"
+  },
+  "homepage": "https://github.com/Sea-of-Green/Sea-of-Green-Boilerplate#readme"
+}

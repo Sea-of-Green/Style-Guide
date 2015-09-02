@@ -111,33 +111,51 @@
     </footer>
 
     <!-- Scripts -->
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script>
+    <script type="text/javascript">
       // Send newsletter signup to Mailchimp
       function newsletterSignup() {
-        var email = $("#footer__newsletter-signup-input").val();
+        var email = document.getElementById('footer__newsletter-signup-input').value;
         var link = "http://sea-of-green.us7.list-manage2.com/subscribe?u=fdddde00588b5c6e72568d831&id=878c26efbd&MERGE0=";
         window.location.replace(link+email);
       }
 
       // Add Year to Copyright
       var year = new Date().getFullYear();
-      $("#footer__copyright-year").text(year);
+      document.getElementById('footer__copyright-year').innerHTML = year;
 
       // Add 'utm_source=sea-of-green' to external links
-      // link: https://css-tricks.com/snippets/jquery/target-only-external-links/
       var ref = "utm_source=sea-of-green";
-      $('a').each(function() {
+      var links = document.getElementsByTagName('a');
+      for (i = 0; i < links.length; i++) {
         var a = new RegExp('/' + window.location.host + '/');
-        if (!a.test(this.href)) {
-          var link = this.href;
-          if (link.search("/?") != -1 && link.search("=") != -1) {
-            this.href += '&' + ref;
+        if (!a.test(links[i].href) && links[i].href.search("sea-of-green") == -1) {
+
+          var link = links[i].href;
+
+          if (link.search("#") != -1) {
+
+            var linkParts = link.split("#"),
+                anchor = linkParts.pop(),
+                linkParts = linkParts.pop(),
+                link = linkParts.toString().replace(",", "");
+
+            if (link.search("/?") != -1 && link.search("=") != -1) {
+              links[i].href = link + '&' + ref + "#" + anchor;
+            } else {
+              links[i].href = link + '?' + ref + "#" + anchor;
+            }
+
           } else {
-            this.href += '?' + ref;
+
+            if (link.search("/?") != -1 && link.search("=") != -1) {
+              links[i].href += '&' + ref;
+            } else {
+              links[i].href += '?' + ref;
+            }
+
           }
         }
-      });
+      }
     </script>
   </body>
 </html>

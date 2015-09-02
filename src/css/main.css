@@ -553,6 +553,9 @@ a:focus {
   color: #0091b2;
   border-bottom: 0.1em solid currentColor; }
 
+a:active {
+  color: #005c82; }
+
 nav {
   width: 100%; }
 
@@ -701,12 +704,24 @@ button:active,
 .btn:focus, button:focus {
   background: #007197;
   background: -webkit-linear-gradient(top, #0091b2, #005c82);
-  background: linear-gradient(to bottom, #0091b2, #005c82); }
+  background: linear-gradient(to bottom, #0091b2, #005c82);
+  border-color: #005c82; }
 
 .btn:active, button:active {
   background: #005c82;
   background: -webkit-linear-gradient(top, #005c82, #005c82);
-  background: linear-gradient(to bottom, #005c82, #005c82); }
+  background: linear-gradient(to bottom, #005c82, #005c82);
+  color: #ffffff; }
+
+.btn--reverse:before {
+  font-family: "Font Awesome", FontAwesome;
+  font-weight: 400;
+  font-style: normal;
+  content: '\f0d9';
+  padding-right: 1rem; }
+
+.btn--reverse:after {
+  display: none; }
 
 .btn--white {
   background: #ffffff;
@@ -720,12 +735,14 @@ button:active,
 .btn--white:focus {
   background: #e5e1db;
   background: -webkit-linear-gradient(top, #ffffff, #e5e1db);
-  background: linear-gradient(to bottom, #ffffff, #e5e1db); }
+  background: linear-gradient(to bottom, #ffffff, #e5e1db);
+  border-color: #e5e1db; }
 
 .btn--white:active {
   background: #e5e1db;
   background: -webkit-linear-gradient(top, #e5e1db, #e5e1db);
-  background: linear-gradient(to bottom, #e5e1db, #e5e1db); }
+  background: linear-gradient(to bottom, #e5e1db, #e5e1db);
+  color: #0091b2; }
 
 .btn--success {
   background: #77bc1f;
@@ -739,12 +756,14 @@ button:active,
 .btn--success:focus {
   background: #62a60a;
   background: -webkit-linear-gradient(top, #77bc1f, #648b1a);
-  background: linear-gradient(to bottom, #77bc1f, #648b1a); }
+  background: linear-gradient(to bottom, #77bc1f, #648b1a);
+  border-color: #648b1a; }
 
 .btn--success:active {
   background: #648b1a;
   background: -webkit-linear-gradient(top, #648b1a, #648b1a);
-  background: linear-gradient(to bottom, #648b1a, #648b1a); }
+  background: linear-gradient(to bottom, #648b1a, #648b1a);
+  color: #ffffff; }
 
 .btn--warning {
   background: #dba900;
@@ -758,12 +777,14 @@ button:active,
 .btn--warning:focus {
   background: #c29500;
   background: -webkit-linear-gradient(top, #dba900, #a88200);
-  background: linear-gradient(to bottom, #dba900, #a88200); }
+  background: linear-gradient(to bottom, #dba900, #a88200);
+  border-color: #a88200; }
 
 .btn--warning:active {
   background: #a88200;
   background: -webkit-linear-gradient(top, #a88200, #a88200);
-  background: linear-gradient(to bottom, #a88200, #a88200); }
+  background: linear-gradient(to bottom, #a88200, #a88200);
+  color: #ffffff; }
 
 .btn--fail {
   background: #ff4337;
@@ -777,12 +798,14 @@ button:active,
 .btn--fail:focus {
   background: #ff1304;
   background: -webkit-linear-gradient(top, #ff4337, #d00c00);
-  background: linear-gradient(to bottom, #ff4337, #d00c00); }
+  background: linear-gradient(to bottom, #ff4337, #d00c00);
+  border-color: #d00c00; }
 
 .btn--fail:active {
   background: #d00c00;
   background: -webkit-linear-gradient(top, #d00c00, #d00c00);
-  background: linear-gradient(to bottom, #d00c00, #d00c00); }
+  background: linear-gradient(to bottom, #d00c00, #d00c00);
+  color: #ffffff; }
 
 .input-bar {
   max-width: 55rem;
