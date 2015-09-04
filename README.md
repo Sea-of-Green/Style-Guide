@@ -27,5 +27,5 @@ Sea of Green uses [Sass](http://sass-lang.com) with [Bourbon](http://bourbon.io)
 2. Clone repo to your computer.
 3. Open Terminal, and navigate to the clone: ```cd clone/folder/here```
 4. Run ```npm install```
-5. Run ```gulp```
-6. If a browser window doesn't automatically open, navigate to the first url that appeared after the ```gulp``` command was run.
+5. Run ```gulp watch```
+6. If a browser window doesn't automatically open, point your browser to the first url that appeared in the terminal after the ```gulp watch``` command was run.

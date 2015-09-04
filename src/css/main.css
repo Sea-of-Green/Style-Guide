@@ -688,7 +688,8 @@ footer ul {
   border-radius: 7px;
   border: 1px solid;
   color: #ffffff;
-  border-color: #005c82; }
+  border-color: #005c82;
+  cursor: pointer; }
 
 .btn:after, button:after {
   font-family: "Font Awesome", FontAwesome;
@@ -853,7 +854,8 @@ button:active,
   background: #e5e1db;
   background: -webkit-linear-gradient(top, #e5e1db, #e5e1db);
   background: linear-gradient(to bottom, #e5e1db, #e5e1db);
-  color: #aea198; }
+  color: #aea198;
+  cursor: pointer; }
 
 .input-bar button:after {
   font-family: "Font Awesome", FontAwesome;
