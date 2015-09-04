@@ -18,3 +18,14 @@ Sea of Green uses [Sass](http://sass-lang.com) with [Bourbon](http://bourbon.io)
 * [Buttons](http://codepen.io/lowmess/full/WvYaZG/)
 * [Input Bar](http://codepen.io/lowmess/full/waRoeB/)
 * Footer
+
+***
+
+### How to View
+
+1. Install [Node](http://nodejs.org) & [Gulp](http://gulpjs.com) globally.
+2. Clone repo to your computer.
+3. Open Terminal, and navigate to the clone: ```cd clone/folder/here```
+4. Run ```npm install```
+5. Run ```gulp```
+6. If a browser window doesn't automatically open, navigate to the first url that appeared after the ```gulp``` command was run.
