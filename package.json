@@ -6,14 +6,18 @@
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.8.2",
+    "del": "^2.0.2",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
+    "gulp-combine-media-queries": "^0.2.0",
     "gulp-csso": "^1.0.0",
-    "gulp-rename": "^1.2.2",
+    "gulp-file-include": "^0.13.7",
+    "gulp-inject": "^1.5.0",
     "gulp-sass": "^2.0.4",
     "gulp-typogr": "^1.0.0",
+    "gulp-uglify": "^1.4.1",
     "gulp-uncss": "^1.0.3",
-    "merge-stream": "^1.0.0"
+    "node-neat": "^1.7.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
