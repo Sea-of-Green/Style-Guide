@@ -18,7 +18,7 @@ var browserSync = require('browser-sync');
 
 var neatPaths = neat.includePaths;
 
-gulp.task('default', ['clean', 'build']);
+gulp.task('default', ['build']);
 
 // Sass & CSS
 
@@ -28,7 +28,8 @@ gulp.task('sass', function() {
       includePaths: neatPaths
     }))
     .pipe(uncss({
-      html: ['src/**/*.html']
+      html: ['src/**/*.html'],
+      ignore: [/([\S])+(?=[closed])\w+/, /([\S])+(?=[open])\w+/]
     }))
     .pipe(cmq())
     .pipe(autoprefixer())
@@ -47,7 +48,8 @@ gulp.task('sass:debug', function() {
     }))
     .pipe(sass().on('error', sass.logError))
     .pipe(uncss({
-      html: ['src/**/*.html']
+      html: ['src/**/*.html'],
+      ignore: [/[--closed]/]
     }))
     .pipe(cmq())
     .pipe(autoprefixer())
@@ -113,5 +115,5 @@ gulp.task('browserSync', function() {
 gulp.task('watch', ['browserSync', 'build'], function () {
   gulp.watch('src/stylesheets/**/*.scss', ['sass']);
   gulp.watch('src/markup/**/*.html', ['html']);
-  gulp.watch('src/scripts/**/*.html', ['js']);
+  gulp.watch('src/scripts/**/*.js', ['js']);
 });

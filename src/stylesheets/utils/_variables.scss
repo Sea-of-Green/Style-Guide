@@ -108,6 +108,11 @@ $symbol: 'Font Awesome', FontAwesome;
 $gutter: $base-font-size !global;
 $max-width: $measure !global;
 
+// NAV SETTINGS
+// ============
+
+$slider-width: 275px;
+
 // ============
 // LISTS & MAPS
 // ============
@@ -130,8 +135,9 @@ $breakpoints: (
 // A running list of z-indexii. Used with @function z.
 
 $zindex: (
-  background: 0,
-  nav: 1000
+  background: -200,
+  content: -100,
+  nav: 1000,
 );
 
 // FONTS

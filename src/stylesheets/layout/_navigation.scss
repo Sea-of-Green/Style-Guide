@@ -2,6 +2,138 @@
 // This file contains styles that are specific to the navigation.
 // -----------------------------------------------------------------------------
 
-nav {
-  @include fill-parent;
+.nav {
+  z-index: z(nav);
+
+  &__bar {
+    @include fill-parent;
+    @include position(fixed, 0 0 null 0);
+
+    height: 3.5rem;
+
+    padding-top: $gutter;
+
+    background: $blue;
+    color: $white;
+
+    transition: left 0.3s cubic-bezier(0.4, 0.2, 0.2, 1.25);
+
+    @include respond-to(medium) {
+      display: none;
+    }
+  }
+
+  &__button {
+    float: left;
+
+    width: $gutter + rem(45);
+
+    margin-left: $gutter;
+
+    cursor: pointer;
+  }
+  &__button-line {
+    width: 45px;
+    height: 5px;
+
+    border-radius: 7px;
+
+    background: $white;
+
+    transition: transform 0.5s cubic-bezier(0.75, -0.2, 0.2, 1.25), background 0.3s ease;
+
+    &:not(&:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__title {
+    margin-top: -$gutter;
+
+    font-weight: 400;
+  }
+
+  &__content {
+    @include position(fixed, 0 0 0 ($slider-width * -1));
+
+    height: 100vh;
+    width: $slider-width;
+
+    padding: 0 $gutter;
+
+    background: $gray-1;
+
+    transition: left 0.3s cubic-bezier(0.4, 0.2, 0.2, 1.25);
+  }
+  &__list {
+    margin: 0;
+    margin-top: -$gutter;
+    padding:0;
+
+    list-style-type: none;
+
+    h3 {
+      margin-bottom: $h3-line-height * 0.25;
+
+      a, a:visited {
+        color: $black;
+      }
+    }
+    a, a:visited {
+      color: $blue;
+    }
+  }
+}
+
+.nav--open {
+  .nav__bar {
+    left: $slider-width;
+  }
+
+  .nav__button-line {
+    &:first-child {
+      background: $blue-1;
+
+      transform: rotateZ(135deg) translate(7px, -7px);
+    }
+    &:nth-child(2) {
+      transform: rotateY(90deg);
+    }
+    &:last-child {transform: rotateZ(-135deg) translate(7px, 7px);
+    }
+  }
+
+  .nav__content {
+    left: 0;
+  }
+}
+
+.content {
+  @include outer-container;
+
+  position: relative;
+  left: 0;
+
+  padding: 0 $gutter;
+  margin-top: $base-line-height * 3;
+
+  z-index: z(content);
+
+  transition: left 0.3s cubic-bezier(0.4, 0.2, 0.2, 1.25);
+
+  @include respond-to(medium) {
+    margin-top: 0;
+  }
+
+  &--closed {
+    left: $slider-width;
+  }
+
+  &__title {
+    display: none;
+
+    @include respond-to(medium) {
+      display: block;
+    }
+  }
 }
