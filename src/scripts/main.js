@@ -46,25 +46,13 @@ for (i = 0; i < links.length; i++) {
 // Navigation
 var nav       = document.querySelector('.nav'),
     navButton = document.querySelector('.nav__button'),
-    content   = document.querySelector('.content');
+    content   = document.querySelector('.style-guide');
 
-if (window.matchMedia('(max-width: 39.99rem)')) {
+if (window.matchMedia('(max-width: 63.99rem)')) {
 
   navButton.onclick = function() {
     nav.classList.toggle('nav--open'); // Show links
-    content.classList.toggle('content--closed'); // Move content
+    content.classList.toggle('style-guide--closed'); // Move content
   };
 
 }
-
-var width = document.innerWidth;
-window.addEventListener('resize', function(event) {
-  var newWidth = window.innerWidth;
-
-  if (width < 40*16 && newWidth > 40*16) { // if window is resized from below the nav breakpoint to above it, remove the classes added when navButton is clicked
-    if (nav.classList.contains('nav--open')) { nav.classList.remove('nav--open'); }
-    if (content.classList.contains('content--closed')) { nav.classList.remove('content--closed'); }
-  }
-
-  width = newWidth;
-});

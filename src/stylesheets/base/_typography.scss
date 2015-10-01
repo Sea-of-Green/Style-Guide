@@ -88,6 +88,8 @@ h6 {
   text-transform: uppercase;
 }
 p, ul, ol, pre, table, blockquote {
+  max-width: $measure;
+  
   margin-top: $base-line-height;
   margin-bottom: $base-line-height;
 }

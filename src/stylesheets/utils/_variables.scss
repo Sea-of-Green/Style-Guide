@@ -48,7 +48,7 @@ $fail: #ff4337;
 // ==========
 
 $modular-scale-base: 1rem;
-$measure: 55rem;
+$measure: 50rem;
 
 // Small font sizes
 
@@ -111,7 +111,7 @@ $max-width: $measure !global;
 // NAV SETTINGS
 // ============
 
-$slider-width: 275px;
+$slider-width: rem(275);
 
 // ============
 // LISTS & MAPS

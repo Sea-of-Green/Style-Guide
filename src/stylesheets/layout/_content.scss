@@ -1,0 +1,21 @@
+.style-guide {
+  position: relative;
+  left: 0;
+
+  transition: left 0.3s cubic-bezier(0.4, 0.2, 0.2, 1.25);
+
+  &--closed {
+    left: $slider-width;
+
+    overflow-y: hidden;
+  }
+}
+
+.content {
+  @include outer-container;
+
+  padding: 0 $gutter;
+  margin-top: $base-line-height * 3;
+
+  z-index: z(content);
+}
