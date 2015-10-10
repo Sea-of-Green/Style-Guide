@@ -48,11 +48,7 @@ var nav       = document.querySelector('.nav'),
     navButton = document.querySelector('.nav__button'),
     content   = document.querySelector('.style-guide');
 
-if (window.matchMedia('(max-width: 63.99rem)')) {
-
-  navButton.onclick = function() {
-    nav.classList.toggle('nav--open'); // Show links
-    content.classList.toggle('style-guide--closed'); // Move content
-  };
-
+navButton.onclick = function() {
+  nav.classList.toggle('nav--open'); // Show links
+  content.classList.toggle('style-guide--closed'); // Move content
 }

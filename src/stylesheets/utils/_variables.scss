@@ -111,7 +111,8 @@ $max-width: $measure !global;
 // NAV SETTINGS
 // ============
 
-$slider-width: rem(275);
+$nav-width: rem(275);
+$nav-height: 3.75rem;
 
 // ============
 // LISTS & MAPS
@@ -136,8 +137,12 @@ $breakpoints: (
 
 $zindex: (
   background: -200,
+
   content: -100,
+
   nav: 1000,
+  nav__content: 1010,
+  nav__bar: 1020,
 );
 
 // FONTS

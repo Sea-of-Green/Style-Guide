@@ -9,12 +9,14 @@
     @include fill-parent;
     @include position(fixed, 0 0 null 0);
 
-    height: 3.75rem;
+    height: $nav-height;
 
     padding-top: $gutter;
 
     background: $blue;
     color: $white;
+
+    z-index: z(nav__bar);
 
     transition: left 0.3s cubic-bezier(0.4, 0.2, 0.2, 1.25);
   }
@@ -37,7 +39,7 @@
 
     background: $white;
 
-    transition: transform 0.5s cubic-bezier(0.75, -0.2, 0.2, 1.25), background 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.75, -0.2, 0.2, 1.25), background 0.3s ease;
 
     &:not(:last-child) {
       margin-bottom: 5px;
@@ -53,47 +55,46 @@
   }
 
   &__content {
-    @include position(fixed, 0 0 0 (-$slider-width) );
+    @include position(fixed, $nav-height 0 0 (-$nav-width) );
 
-    height: 100vh;
-    width: $slider-width;
+    height: calc(100vh - #{$nav-height});
+    width: $nav-width;
 
-    padding: 0 $gutter;
+    padding: 0.75rem $gutter 0;
 
-    background: $blue-5;
-    background: linear-gradient(to bottom, $blue 3.75rem, $blue-5);
+    background: $gray-1;
+    // background: linear-gradient(to bottom, $blue $nav-height, $blue-5);
+
+    z-index: z(nav__content);
 
     overflow-y: auto;
 
     transition: left 0.3s cubic-bezier(0.4, 0.2, 0.2, 1.25);
   }
   &__list {
-    @include font(heading-text);
-
     margin: 0;
-    margin-top: -$gutter;
     padding:0;
 
     list-style-type: none;
 
     h3 {
       margin-bottom: $h3-line-height * 0.25;
+      margin-top: $h3-line-height * 0.5;
+
+      a, a:visited {
+        color: $black;
+      }
     }
 
     a, a:visited {
-      color: $white;
-    }
-    a:hover {
-      border: none;
-
-      color: $blue-1;
+      color: $gray;
     }
   }
 }
 
 .nav--open {
   .nav__bar {
-    left: $slider-width;
+    // left: $nav-width;
   }
 
   .nav__button-line {

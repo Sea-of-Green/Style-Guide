@@ -5,7 +5,7 @@
   transition: left 0.3s cubic-bezier(0.4, 0.2, 0.2, 1.25);
 
   &--closed {
-    left: $slider-width;
+    left: $nav-width;
 
     overflow-y: hidden;
   }
@@ -15,7 +15,7 @@
   @include outer-container;
 
   padding: 0 $gutter;
-  margin-top: $base-line-height * 3;
+  margin-top: $nav-height + $base-line-height;
 
   z-index: z(content);
 }
