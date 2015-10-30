@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var del = require('del');
+var concat = require('gulp-concat');
 // Sass & CSS
 var sass = require('gulp-sass');
 var neat = require('node-neat');
@@ -11,68 +12,105 @@ var uncss = require('gulp-uncss');
 var typogr = require('gulp-typogr');
 var inject = require('gulp-inject');
 var include = require('gulp-file-include');
+var toc = require('gulp-toc');
+var md = require('gulp-markdown');
 // Javascript
 var uglify = require('gulp-uglify');
 // Servers
 var browserSync = require('browser-sync');
 
+var paths = {
+  src: 'src/',
+  templatesPath: 'src/templates/',
+  templates: 'src/templates/**/*.html',
+  partialsPath: 'src/templates/partials/',
+  partials: 'src/templates/partials/**/*.html',
+  contentPath: 'src/content/',
+  content: 'src/content/**/*.md',
+  sassPath: 'src/stylesheets/',
+  sass: 'src/stylesheets/*.scss',
+  scriptsPath: 'src/scripts/',
+  scripts: 'src/scripts/**/*.js',
+
+  dist: 'dist/',
+  cssPath: 'dist/css',
+  css: 'dist/css/**/*.css',
+  jsPath: 'dist/js',
+  js: 'dist/js/**/*.js'
+}
+
 var neatPaths = neat.includePaths;
+
+var ignoreRegex = [/([\S])+(?=[closed])\w+/, /([\S])+(?=[open])\w+/];
 
 gulp.task('default', ['build']);
 
 // Sass & CSS
 
 gulp.task('sass', function() {
-  return compressed = gulp.src('src/stylesheets/*.scss')
+  return gulp.src(paths.sass)
     .pipe(sass({
       includePaths: neatPaths
     }))
     .pipe(uncss({
-      html: ['src/**/*.html'],
-      ignore: [/([\S])+(?=[closed])\w+/, /([\S])+(?=[open])\w+/]
+      html: paths.templates,
+      ignore: ignoreRegex
     }))
     .pipe(cmq())
     .pipe(autoprefixer())
     .pipe(csso())
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest(paths.cssPath))
     .pipe(browserSync.reload({
       stream: true
     }));
 });
 
 gulp.task('sass:debug', function() {
-  return gulp.src('src/stylesheets/*.scss')
+  return gulp.src(paths.sass)
     .pipe(sass({
       outputStyle: 'nested',
       includePaths: neatPaths
     }))
     .pipe(sass().on('error', sass.logError))
     .pipe(uncss({
-      html: ['src/**/*.html'],
-      ignore: [/[--closed]/]
+      html: paths.templates,
+      ignore: ignoreRegex
     }))
     .pipe(cmq())
     .pipe(autoprefixer())
-    .pipe(gulp.dest('dist/css'));
+    .pipe(gulp.dest(paths.cssPath));
 });
 
 // HTML
 
-gulp.task('html', ['sass', 'js'], function() {
-  var sources = gulp.src(['dist/**/*.js', 'dist/**/*.css'], {read: false});
+gulp.task('html:md', function() {
+  return gulp.src(paths.content)
+    .pipe(md())
+    .pipe(concat({path: '_content.html'}))
+    .pipe(gulp.dest(paths.partialsPath))
+});
 
-  return gulp.src(['src/markup/**/*.html', '!src/markup/{includes,includes/**}'])
+gulp.task('html', ['html:md', 'html:toc', 'sass', 'js'], function() {
+  var sources = gulp.src([paths.js, paths.css], {read: false});
+
+  return gulp.src([paths.templates, '!' + paths.partialsPath, '!' + paths.partials])
     .pipe(include({
       prefix: '@@',
-      basepath: 'src/markup/includes'
+      basepath: paths.partialsPath
     }))
     .pipe(inject(sources, {
-      ignorePath: '/dist'
+      ignorePath: paths.dist
+    }))
+    .pipe(toc({
+      anchorMin: 1,
+      tocMin: 1,
+      TOC: '<div class="nav__content"><%= toc %></div>',
+      openLI: '<li class="nav__link nav__link--<%= level %>"><a href="#<%= anchor %>"><%= text %></a>'
     }))
     .pipe(typogr({
       only: ['amp', 'widont', 'smartypants']
     }))
-    .pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest(paths.dist))
     .pipe(browserSync.reload({
       stream: true
     }));
@@ -81,11 +119,11 @@ gulp.task('html', ['sass', 'js'], function() {
 // Javascript
 
 gulp.task('js', function() {
-  return gulp.src('src/scripts/**/*.js')
+  return gulp.src(paths.scripts)
     .pipe(uglify({
       mangle: true
     }))
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest(paths.jsPath))
     .pipe(browserSync.reload({
       stream: true
     }));
@@ -107,13 +145,13 @@ gulp.task('build', ['html'], function() {
 gulp.task('browserSync', function() {
   browserSync({
     server: {
-      baseDir: 'dist'
+      baseDir: paths.dist
     },
   })
 });
 
 gulp.task('watch', ['browserSync', 'build'], function () {
-  gulp.watch('src/stylesheets/**/*.scss', ['sass']);
-  gulp.watch('src/markup/**/*.html', ['html']);
-  gulp.watch('src/scripts/**/*.js', ['js']);
+  gulp.watch(paths.sass, ['sass']);
+  gulp.watch([paths.templates, paths.content], ['html']);
+  gulp.watch(paths.scripts, ['js']);
 });

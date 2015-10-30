@@ -10,7 +10,7 @@ var year = new Date().getFullYear();
 document.getElementById('footer__copyright-year').innerHTML = year;
 
 // Add 'utm_source=sea-of-green' to external links
-var ref = "utm_source=sea-of-green";
+var ref = "utm_source=sea-of-green&utm_medium=referral";
 var links = document.getElementsByTagName('a');
 for (i = 0; i < links.length; i++) {
   var a = new RegExp('/' + window.location.host + '/');
