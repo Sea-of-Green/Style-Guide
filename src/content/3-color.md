@@ -1,3 +1,5 @@
+***
+
 # Color
 
 Color can be just as important as a logo in identifying a brand, and is perhaps the most important tool for conveying a brand's attitude. Cooler colors like blue, for example, are often used to convey friendliness and calm; warmer colors such as red are used to indicate energy and passion.

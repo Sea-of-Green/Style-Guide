@@ -1,3 +1,5 @@
+***
+
 # Logo
 
 While a brand is more than its logo, the logo is often the lynchpin of the brand. As such, the way it is used should be carefully considered. This section of the guide will help you do that.

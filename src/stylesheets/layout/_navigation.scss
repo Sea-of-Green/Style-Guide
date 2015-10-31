@@ -11,8 +11,6 @@
 
     height: $nav-height;
 
-    padding-top: $gutter;
-
     background: $blue;
     color: $white;
 
@@ -27,7 +25,7 @@
     width: $gutter + rem(45);
 
     margin-left: $gutter;
-    margin-top: 0.125rem;
+    margin-top: $gutter;
 
     cursor: pointer;
   }
@@ -47,8 +45,12 @@
   }
 
   &__title {
+    @extend h2;
     @include outer-container($max-width - 2);
-    margin-top: -$gutter;
+
+    display: block;
+
+    margin-top: 0;
 
     font-weight: 500;
     color: $white;
@@ -76,9 +78,13 @@
     padding:0;
 
     list-style-type: none;
+  }
+  &__link {
 
-    h3 {
-      margin-bottom: $h3-line-height * 0.25;
+    &--1 {
+      @extend h3;
+
+      margin-bottom: $h3-line-height * 0.5;
       margin-top: $h3-line-height * 0.5;
 
       a, a:visited {
@@ -86,8 +92,15 @@
       }
     }
 
-    a, a:visited {
-      color: $gray;
+    &--2 {
+      @include font(body-text);
+
+      font-size: $base-font-size;
+      line-height: $base-line-height;
+
+      a, a:visited {
+        color: $gray;
+      }
     }
   }
 }

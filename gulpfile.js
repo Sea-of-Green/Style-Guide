@@ -7,7 +7,6 @@ var neat = require('node-neat');
 var autoprefixer = require('gulp-autoprefixer');
 var cmq = require('gulp-combine-media-queries');
 var csso = require('gulp-csso');
-var uncss = require('gulp-uncss');
 // HTML
 var typogr = require('gulp-typogr');
 var inject = require('gulp-inject');
@@ -21,20 +20,26 @@ var browserSync = require('browser-sync');
 
 var paths = {
   src: 'src/',
+  dist: 'dist/',
+
   templatesPath: 'src/templates/',
   templates: 'src/templates/**/*.html',
+
   partialsPath: 'src/templates/partials/',
   partials: 'src/templates/partials/**/*.html',
+
   contentPath: 'src/content/',
   content: 'src/content/**/*.md',
+
   sassPath: 'src/stylesheets/',
   sass: 'src/stylesheets/*.scss',
+
   scriptsPath: 'src/scripts/',
   scripts: 'src/scripts/**/*.js',
 
-  dist: 'dist/',
   cssPath: 'dist/css',
   css: 'dist/css/**/*.css',
+
   jsPath: 'dist/js',
   js: 'dist/js/**/*.js'
 }
@@ -52,10 +57,6 @@ gulp.task('sass', function() {
     .pipe(sass({
       includePaths: neatPaths
     }))
-    .pipe(uncss({
-      html: paths.templates,
-      ignore: ignoreRegex
-    }))
     .pipe(cmq())
     .pipe(autoprefixer())
     .pipe(csso())
@@ -72,10 +73,6 @@ gulp.task('sass:debug', function() {
       includePaths: neatPaths
     }))
     .pipe(sass().on('error', sass.logError))
-    .pipe(uncss({
-      html: paths.templates,
-      ignore: ignoreRegex
-    }))
     .pipe(cmq())
     .pipe(autoprefixer())
     .pipe(gulp.dest(paths.cssPath));
@@ -90,7 +87,7 @@ gulp.task('html:md', function() {
     .pipe(gulp.dest(paths.partialsPath))
 });
 
-gulp.task('html', ['html:md', 'html:toc', 'sass', 'js'], function() {
+gulp.task('html', ['html:md', 'sass', 'js'], function() {
   var sources = gulp.src([paths.js, paths.css], {read: false});
 
   return gulp.src([paths.templates, '!' + paths.partialsPath, '!' + paths.partials])
@@ -102,9 +99,12 @@ gulp.task('html', ['html:md', 'html:toc', 'sass', 'js'], function() {
       ignorePath: paths.dist
     }))
     .pipe(toc({
-      anchorMin: 1,
       tocMin: 1,
+      tocMax: 2,
+      anchorMin: 1,
+      anchorMax: 2,
       TOC: '<div class="nav__content"><%= toc %></div>',
+      openUL: '<ul class="nav__list nav__list--<%= depth %>">',
       openLI: '<li class="nav__link nav__link--<%= level %>"><a href="#<%= anchor %>"><%= text %></a>'
     }))
     .pipe(typogr({
@@ -152,6 +152,7 @@ gulp.task('browserSync', function() {
 
 gulp.task('watch', ['browserSync', 'build'], function () {
   gulp.watch(paths.sass, ['sass']);
-  gulp.watch([paths.templates, paths.content], ['html']);
+  gulp.watch(paths.templates, ['html']);
+  gulp.watch(paths.content, ['html']);
   gulp.watch(paths.scripts, ['js']);
 });

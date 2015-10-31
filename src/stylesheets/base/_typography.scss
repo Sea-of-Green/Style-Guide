@@ -89,7 +89,7 @@ h6 {
 }
 p, ul, ol, pre, table, blockquote {
   max-width: $measure;
-  
+
   margin-top: $base-line-height;
   margin-bottom: $base-line-height;
 }
@@ -195,10 +195,6 @@ a {
   text-decoration: none;
   color: $blue;
 
-  &:visited {
-    color: $gray;
-  }
-
   @include on-event {
     color: $blue;
     border-bottom: 0.1em solid currentColor;
@@ -207,4 +203,17 @@ a {
   &:active {
     color: $blue-5;
   }
+}
+
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a,
+a > h2,
+a > h3,
+a > h4,
+a > h5,
+a > h6 {
+  color: $black;
 }
