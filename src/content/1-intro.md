@@ -18,7 +18,7 @@ Think about Sea of Green. What does it look like?
 
 ## Links
 
-* (Sea of Green Online Store)[http://sea-of-green.com]
-* (Trello)[http://trello.com/seaofgreen]
-* (GitHub)[http://github.com/sea-of-green]
-* (Hands-on Hydro)[http://handsonhydro.tumblr.com]
+* [Sea of Green Online Store](http://sea-of-green.com)
+* [Trello](http://trello.com/seaofgreen)
+* [GitHub](http://github.com/sea-of-green)
+* [Hands-on Hydro](http://handsonhydro.tumblr.com)

@@ -27,9 +27,13 @@ body {
 
 // <img> sanitization
 img {
-  max-height: 90vh;
+  display: block;
+
+  max-height: 75vh;
   width: auto;
   max-width: 100%;
+
+  margin: 0 auto;
 }
 
 // FontAwesome fix

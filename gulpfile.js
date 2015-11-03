@@ -105,7 +105,7 @@ gulp.task('html', ['html:md', 'sass', 'js'], function() {
       anchorMax: 2,
       TOC: '<div class="nav__content"><%= toc %></div>',
       openUL: '<ul class="nav__list nav__list--<%= depth %>">',
-      openLI: '<li class="nav__link nav__link--<%= level %>"><a href="#<%= anchor %>"><%= text %></a>'
+      openLI: '<li class="nav__link nav__link--<%= level %>"><a data-scroll href="#<%= anchor %>"><%= text %></a>'
     }))
     .pipe(typogr({
       only: ['amp', 'widont', 'smartypants']

@@ -43,20 +43,24 @@ for (i = 0; i < links.length; i++) {
   }
 }
 
+smoothScroll.init();
+
 // Navigation
 var nav       = document.querySelector('.nav'),
     navButton = document.querySelector('.nav__button'),
     content   = document.querySelector('.style-guide'),
-    navLinks  = document.querySelectorAll('.nav__link');
+    navLinks  = document.querySelectorAll('.nav__link a'),
+    toggleNav = function() {
+      nav.classList.toggle('nav--open'); // Toggle links
+      content.classList.toggle('style-guide--closed'); // Move content
+    };
 
-navButton.onclick = function() {
-  nav.classList.toggle('nav--open'); // Show links
-  content.classList.toggle('style-guide--closed'); // Move content
-}
+navButton.addEventListener("click", function() {
+  toggleNav();
+}, false);
 
 for(link = 0; link < navLinks.length; link++) {
   navLinks[link].addEventListener("click", function() {
-    nav.classList.toggle('nav--open'); // Show links
-    content.classList.toggle('style-guide--closed'); // Move content
+    toggleNav();
   }, false);
 }
