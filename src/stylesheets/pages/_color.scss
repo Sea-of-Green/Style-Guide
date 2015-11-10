@@ -1,0 +1,106 @@
+.color {
+  &__combo {
+    @include fill-parent;
+
+    padding: 1px $base-line-height;
+    margin-bottom: $base-line-height;
+  }
+  &__combo-header {
+    @extend h1;
+
+    display: block;
+  }
+  &__combo-subhead {
+    @extend h3;
+
+    display: block;
+  }
+}
+
+.color__combo--white {
+  border: 1px solid $gray-1;
+}
+
+.color__combo--black {
+  background: $gray-5;
+
+  .color__combo-header {
+    color: $yellow;
+  }
+  .color__combo-subhead {
+    color: $white;
+  }
+  p {
+    color: $white;
+  }
+  a {
+    color: $yellow;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
+
+.color__combo--blue {
+  background: $blue;
+
+  .color__combo-header {
+    color: $yellow;
+  }
+  .color__combo-subhead {
+    color: $white;
+  }
+  p {
+    color: $white;
+  }
+  a {
+    color: $yellow;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
+
+.color__combo--green {
+  background: $green;
+
+  .color__combo-header {
+    color: $white;
+  }
+  .color__combo-subhead {
+    color: $black;
+  }
+  p {
+    color: $black;
+  }
+  a {
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.color__combo--gray {
+  background: $gray;
+
+  .color__combo-header {
+    color: $white;
+  }
+  .color__combo-subhead {
+    color: $black;
+  }
+  p {
+    color: $black;
+  }
+  a {
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}

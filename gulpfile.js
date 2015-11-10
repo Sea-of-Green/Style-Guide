@@ -8,7 +8,6 @@ var autoprefixer = require('gulp-autoprefixer');
 var cmq = require('gulp-combine-media-queries');
 var csso = require('gulp-csso');
 // HTML
-var typogr = require('gulp-typogr');
 var inject = require('gulp-inject');
 var include = require('gulp-file-include');
 var toc = require('gulp-toc');
@@ -82,7 +81,10 @@ gulp.task('sass:debug', function() {
 
 gulp.task('html:md', function() {
   return gulp.src(paths.content)
-    .pipe(md())
+    .pipe(md({
+      gfm: true,
+      smartypants: true
+    }))
     .pipe(concat({path: '_content.html'}))
     .pipe(gulp.dest(paths.partialsPath))
 });
@@ -106,9 +108,6 @@ gulp.task('html', ['html:md', 'sass', 'js'], function() {
       TOC: '<div class="nav__content"><%= toc %></div>',
       openUL: '<ul class="nav__list nav__list--<%= depth %>">',
       openLI: '<li class="nav__link nav__link--<%= level %>"><a data-scroll href="#<%= anchor %>"><%= text %></a>'
-    }))
-    .pipe(typogr({
-      only: ['amp', 'widont', 'smartypants']
     }))
     .pipe(gulp.dest(paths.dist))
     .pipe(browserSync.reload({

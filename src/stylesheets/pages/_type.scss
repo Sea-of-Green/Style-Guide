@@ -1,0 +1,30 @@
+.type {
+  &__lines {
+    padding: $base-line-height;
+
+    background: repeating-linear-gradient(to bottom, $blue-5 0px, $gray-1 1px, $gray-1 1.7rem, $blue-5 1.75rem);
+  }
+  &__block {
+    background: rgba($blue, 0.25);
+
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__h1 {
+    @extend h1;
+    color: $black;
+  }
+  &__h2 {
+    @extend h2;
+  }
+  &__h3 {
+    @extend h3;
+  }
+  &__h4 {
+    @extend h4;
+  }
+}

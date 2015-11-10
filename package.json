@@ -1,7 +1,7 @@
 {
-  "name": "sea-of-green-starter-kit",
-  "version": "1.0.2",
-  "description": "Starter kit for Sea of Green related web projects",
+  "name": "sea-of-green-style-guide",
+  "version": "1.0.0",
+  "description": "Style Guide for Sea of Green.",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
@@ -17,7 +17,6 @@
     "gulp-markdown": "^1.1.0",
     "gulp-sass": "^2.0.4",
     "gulp-toc": "^0.1.0",
-    "gulp-typogr": "^1.0.0",
     "gulp-uglify": "^1.4.1",
     "node-neat": "^1.7.2"
   },
@@ -26,12 +25,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sea-of-Green/Sea-of-Green-Boilerplate.git"
+    "url": "git+https://github.com/Sea-of-Green/Style-Guide.git"
   },
   "author": "Alec Lomas",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Sea-of-Green/Sea-of-Green-Boilerplate/issues"
+    "url": "https://github.com/Sea-of-Green/Style-Guide/issues"
   },
-  "homepage": "https://github.com/Sea-of-Green/Sea-of-Green-Boilerplate#readme"
+  "homepage": "https://github.com/Sea-of-Green/Style-Guide#readme"
 }
