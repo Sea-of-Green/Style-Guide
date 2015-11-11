@@ -39,7 +39,6 @@
 
     <!-- inject:css -->
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/main[Conflict].css">
     <!-- endinject -->
   </head>
   <body class="style-guide">
@@ -177,16 +176,22 @@
 
 <hr>
 <h1 id="typography"><a href="#typography" name="typography">Typography</a></h1>
-<p>If you look at the <a href="#color-combinations">color combinations</a> above, you may notice that the examples look remarkably alike, despite being (mostly) different colors. This is because Sea of Green follows a set of strict typography rules.</p>
+<p>If you look at the <a data-scroll href="#color-combinations">color combinations</a> above, you may notice that the examples look remarkably alike, despite being (mostly) different colors. This is because Sea of Green follows a set of strict typography rules.</p>
 <h2 id="font-families"><a href="#font-families" name="font-families">Font Families</a></h2>
+<p>The first of these rules is the font families we use. Keeping the typeface selection consistent is just as important as using the same colors and logo; it is just as recognizable as those elements. Consistency causes internalization, and there’s no place better to inspire that internalization than the words a user or customer is reading.</p>
+<h3 id="heading-text">Heading Text</h3>
+<p>For headers, we use a typeface called <a href="https://avondaletypeco.com/atc-overlook/">ATC Overlook</a>. Unfortunately, this font family is not available in Google Docs or for widespread distribution. We are working on a sign-making web application, but in the mean time you can <a href="mailto:alec@sea-of-green.com">contact us</a> for use in Microsoft Office products.</p>
+<h3 id="body-text">Body Text</h3>
+<p>Body text is set in <a href="https://www.google.com/fonts/specimen/Droid+Serif">Droid Serif</a>. Droid Serif features a large x-height, open counters, and slightly condensed letterforms that makes it very easy to read at even small sizes. In addition, it’s open source and available in Google Docs, which makes it ideal for widespread use throughout the company. <a href="https://support.google.com/docs/answer/189190?hl=en">Here is a guide for adding fonts to your Google Docs documents</a>.</p>
 <h2 id="type-size"><a href="#type-size" name="type-size">Type Size</a></h2>
+<p>Size is another very important factor in maintaining consistency. Size, in this case, is defined as a combination of the font size, line-spacing, and font weight.</p>
 <h3 id="the-modular-scale">The Modular Scale</h3>
+<p><a href="http://www.modularscale.com/?11&amp;pt&amp;1.414&amp;web&amp;table">modularscale.com</a></p>
 <table>
 <thead>
 <tr>
 <th style="text-align:right"></th>
-<th style="text-align:center">Web (<code>px</code>)</th>
-<th style="text-align:center">Web(<code>rem</code>)</th>
+<th style="text-align:center">Web</th>
 <th style="text-align:center">Print</th>
 <th style="text-align:center">Large Print</th>
 <th style="text-align:center">Huge Print</th>
@@ -195,40 +200,35 @@
 <tbody>
 <tr>
 <td style="text-align:right"><strong>Heading 1</strong></td>
-<td style="text-align:center"><code>45px</code></td>
-<td style="text-align:center"><code>2.8725rem</code></td>
+<td style="text-align:center"><code>45px (2.8725rem)</code></td>
 <td style="text-align:center"><code>31pt</code></td>
 <td style="text-align:center"><code>68pt</code></td>
 <td style="text-align:center"><code>102pt</code></td>
 </tr>
 <tr>
 <td style="text-align:right"><strong>Heading 2</strong></td>
-<td style="text-align:center"><code>32px</code></td>
-<td style="text-align:center"><code>1.9994rem</code></td>
+<td style="text-align:center"><code>32px (1.9994rem)</code></td>
 <td style="text-align:center"><code>22pt</code></td>
 <td style="text-align:center"><code>48pt</code></td>
 <td style="text-align:center"><code>72pt</code></td>
 </tr>
 <tr>
 <td style="text-align:right"><strong>Heading 3</strong></td>
-<td style="text-align:center"><code>23px</code></td>
-<td style="text-align:center"><code>1.414rem</code></td>
+<td style="text-align:center"><code>23px (1.414rem)</code></td>
 <td style="text-align:center"><code>16pt</code></td>
 <td style="text-align:center"><code>34pt</code></td>
 <td style="text-align:center"><code>51pt</code></td>
 </tr>
 <tr>
 <td style="text-align:right"><strong>Heading 4</strong></td>
-<td style="text-align:center"><code>16px</code></td>
-<td style="text-align:center"><code>1rem</code></td>
+<td style="text-align:center"><code>16px (1rem)</code></td>
 <td style="text-align:center"><code>11pt</code></td>
 <td style="text-align:center"><code>24pt</code></td>
 <td style="text-align:center"><code>36pt</code></td>
 </tr>
 <tr>
 <td style="text-align:right"><strong>Base</strong></td>
-<td style="text-align:center"><code>16px</code></td>
-<td style="text-align:center"><code>1rem</code></td>
+<td style="text-align:center"><code>16px (1rem)</code></td>
 <td style="text-align:center"><code>11pt</code></td>
 <td style="text-align:center"><code>24pt</code></td>
 <td style="text-align:center"><code>36pt</code></td>
@@ -244,6 +244,28 @@
   <p class="type__block ">A vise is a heinous shovel. The loaded engine reveals itself as an afire island to those who look. A station of the colt is assumed to be a hefty tenor. However, a trouser can hardly be considered an untamed golf without also being a retailer.</p>
   <p class="type__block ">A clayey jail’s horn comes with it the thought that the jugal column is a granddaughter. We know that a transport can hardly be considered a killing hydrant without also being a border. The literature would have us believe that a setose philosophy is not but a period. A moneyed health without juices is truly a carp of fiercest romanians.</p>
 </section>
+
+<h3 id="font-weight">Font Weight</h3>
+<table>
+<thead>
+<tr>
+<th>Heading 1</th>
+<th>Heading 2</th>
+<th>Heading 3</th>
+<th>Heading 4</th>
+<th>Base</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bold</td>
+<td>Bold</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Regular</td>
+</tr>
+</tbody>
+</table>
 
 </main>
 
@@ -271,9 +293,9 @@
         <span class="footer__list-header">About Us</span class="footer__list-header">
         <ul>
           <li><a href="//sea-of-green.com/locations.html">Locations</a></li>
-          <li><a href="//sea-of-green.com/shipping-policy.html">Shipping & Return Policy</a></li>
+          <li><a href="//sea-of-green.com/shipping-policy.html">Shipping &amp; Return Policy</a></li>
           <li><a href="//sea-of-green.com/privacy-policy.html">Privacy Policy</a></li>
-          <li><a href="//sea-of-green.com/terms-and-conditions.html">Terms & Conditions</a></li>
+          <li><a href="//sea-of-green.com/terms-and-conditions.html">Terms &amp; Conditions</a></li>
         </ul>
       </div>
     </div>
@@ -292,7 +314,7 @@
       </form>
     </div>
     <div class="footer__info">
-      <p class="footer__copyright">&copy; 1992 -- <span id="footer__copyright-year"></span> Sea of Green Hydrogardens</p>
+      <p class="footer__copyright">&copy; 1992 &ndash; <span id="footer__copyright-year"></span> Sea of Green Hydrogardens</p>
     </div>
   </div>
 </footer>

@@ -2,7 +2,7 @@
   &__lines {
     padding: $base-line-height;
 
-    background: repeating-linear-gradient(to bottom, $blue-5 0px, $gray-1 1px, $gray-1 1.7rem, $blue-5 1.75rem);
+    background: repeating-linear-gradient(to bottom, $gray-1, $gray-1 ($base-line-height - 0.05rem), $blue-5 ($base-line-height - 0.05rem), $blue-5 $base-line-height);
   }
   &__block {
     background: rgba($blue, 0.25);

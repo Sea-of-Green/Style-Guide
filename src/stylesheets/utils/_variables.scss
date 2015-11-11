@@ -52,7 +52,7 @@ $measure: 50rem;
 
 // Small font sizes
 
-$modular-scale-ratio: $perfect-fourth;
+$modular-scale-ratio: $augmented-fourth;
 
 $base-font-size: modular-scale(0);
 
@@ -65,18 +65,6 @@ $h3-font-size: modular-scale(1);
 $h4-font-size: modular-scale(0);
 
 $small-font-size: modular-scale(-1);
-
-// Large font sizes (for non-mobile viewports)
-
-$modular-scale-ratio: $augmented-fourth;
-
-$lg-h1-font-size: modular-scale(3);
-
-$lg-h2-font-size: modular-scale(2);
-
-$lg-h3-font-size: modular-scale(1);
-
-$lg-h4-font-size: modular-scale(0);
 
 // Line Heights
 
@@ -122,11 +110,15 @@ $nav-height: 3.5rem;
 // ===========
 
 $breakpoints: (
+  tiny: "(max-width: 29.99rem)",
   small: "(min-width: 30rem)",
-  is-small: "(max-width: 29.9rem)",
+  only-small: "(min-width: 30rem) and (max-width: 39.99rem)",
   medium: "(min-width: 40rem)",
+  only-medium: "(min-width: 40rem) and (max-width: 63.99rem)",
+  not-medium: "(max-width: 39.99rem)",
   large: "(min-width: 64rem)",
-  not-large: "(max-width: 63.9rem)",
+  only-large: "(min-width: 64rem) and (max-width: 89.99rem)",
+  not-large: "(max-width: 63.99rem)",
   xlarge: "(min-width: 90rem)",
   huge: "(min-width: 120rem)"
 );

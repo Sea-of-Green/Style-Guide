@@ -6,7 +6,7 @@
 // BODY TEXT & HEADERS
 // ===================
 
-body {
+html, body {
   @include font(body-text);
 
   font-size: $base-font-size;
@@ -21,10 +21,6 @@ h1 {
   font-size: $h1-font-size;
   line-height: $h1-line-height;
 
-  @include respond-to(medium) {
-    font-size: $lg-h1-font-size;
-  }
-
   text-transform: capitalize;
   color: $blue;
   letter-spacing: -0.025em;
@@ -37,10 +33,6 @@ h2 {
 
   font-size: $h2-font-size;
   line-height: $h2-line-height;
-
-  @include respond-to(medium) {
-    font-size: $lg-h2-font-size;
-  }
 
   text-transform: capitalize;
   letter-spacing: -0.025em;
@@ -55,10 +47,6 @@ h3 {
   line-height: $h3-line-height;
   letter-spacing: 0.01em;
 
-  @include respond-to(medium) {
-    font-size: $lg-h3-font-size;
-  }
-
   text-transform: capitalize;
 
   margin-top: $base-line-height;
@@ -69,10 +57,6 @@ h4, h5, h6 {
 
   font-size: $h4-font-size;
   line-height: $h4-line-height;
-
-  @include respond-to(medium) {
-    font-size: $lg-h4-font-size;
-  }
 
   margin-top: $base-line-height;
   margin-bottom: $base-line-height;
@@ -216,4 +200,28 @@ a > h4,
 a > h5,
 a > h6 {
   color: $black;
+}
+
+table {
+  display: block;
+
+  overflow: auto;
+
+  td, th {
+    padding: 0.25rem $gutter;
+
+    &:nth-of-type(even) {
+      background: $gray-1;
+    }
+  }
+
+  tbody {
+    tr {
+      border-top: 1px solid $gray;
+    }
+  }
+
+  code {
+    background: none;
+  }
 }
