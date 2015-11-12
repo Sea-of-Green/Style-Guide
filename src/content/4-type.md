@@ -18,11 +18,11 @@ Body text is set in [Droid Serif](https://www.google.com/fonts/specimen/Droid+Se
 
 ## Type Size
 
-Size is another very important factor in maintaining consistency. Size, in this case, is defined as a combination of the font size, line-spacing, and font weight.
+Size is another very important factor in maintaining consistency. Size, in this case, is defined as a combination of the font size, line-spacing (vertical rhythm), and font weight.
 
-### The Modular Scale
+### Font Size
 
-[modularscale.com](http://www.modularscale.com/?11&pt&1.414&web&table)
+Font size is determined using a modular scale. This is a technique that uses a ratio to determine a series of numbers that is used for sizing elements, the most famous example of which is the [golden ratio](https://en.wikipedia.org/wiki/Golden_ratio). The ratio we use is called the augmented fourth, or ```1.414```. Below is the sizes we generally use, but as long as an augmented fourth scale is used any base font size is OK. [Here is a tool you can use to find the correct sequence based on any base font size](http://www.modularscale.com/?11&pt&1.414&web&table). Not that some values will need to be rounded.
 
 |               | Web                    | Print      | Large Print | Huge Print  |
 |--------------:|:----------------------:|:----------:|:-----------:|:-----------:|
@@ -33,6 +33,8 @@ Size is another very important factor in maintaining consistency. Size, in this 
 | **Base**      | ```16px (1rem)```      | ```11pt``` | ```24pt```  | ```36pt```  |
 
 ### Line Spacing
+
+Vertical rhythm is a huge influencer on the way text is read. It's important to give individual lines of text enough room to be read comfortably. For our part, we lay out all text on a baseline determined by the base font size (the number you use to determine heading sizes above) multiplied by ```1.75```. For example, our web typography is laid out on a ```28px (1.75rem)``` baseline. Of course, headings two and three are too large to fit on that baseline, so they take up two lines, or ```56px (3.5rem)```. For print, that would be ```19pt``` & ```38pt```, respectively. Below, you can see this represented visually.
 
 <section class="type__lines">
   <div class="type__block type__h1">Heading 1</div>
@@ -45,6 +47,8 @@ Size is another very important factor in maintaining consistency. Size, in this 
 
 ### Font Weight
 
-| Heading 1 | Heading 2 | Heading 3 | Heading 4 | Base    |
-|-----------|-----------|-----------|-----------|---------|
-| Bold      | Bold      | Medium    | Medium    | Regular |
+Rounding out font sizes, consistent application of weights is also hugely important. Luckily, it's also the easiest of the three principals to apply. Below is a table that shows the weights at the font sizes from above. Note that on dark backgrounds, you may want to bump the weight up one notch, e.g. Medium (500) to Semi-bold (600).
+
+| Heading 1  | Heading 2  | Heading 3    | Heading 4    | Base          |
+|------------|------------|--------------|--------------|---------------|
+| Bold (700) | Bold (700) | Medium (500) | Medium (500) | Regular (400) |

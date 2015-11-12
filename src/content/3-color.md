@@ -20,11 +20,9 @@ Here are the most common color combinations we use:
 
 ### Default (White)
 
-* Background: White / ```#ffffff```
-* Headers & Links: PMS 632 C / ```#0091b2```
-* Text: PMS Black 3 C / ```#212620```
-
-#### Example
+| Background            | Headers & Links           | Text                          |
+|-----------------------|---------------------------|-------------------------------|
+| White / ```#ffffff``` | PMS 632 C / ```#0091b2``` | PMS Black 3 C / ```#212620``` |
 
 <section class="color__combo color__combo--white">
   <span class="color__combo-header">Header</span>
@@ -35,11 +33,9 @@ Here are the most common color combinations we use:
 
 ### Reverse
 
-* Background: PMS 411 C / ```#60504c```
-* Headers & Links: PMS 108 C / ```#ffdb00```
-* Text: White / ```#ffffff```
-
-#### Example
+| Background                | Headers & Links           | Text                  |
+|---------------------------|---------------------------|-----------------------|
+| PMS 411 C / ```#60504c``` | PMS 108 C / ```#ffdb00``` | White / ```#ffffff``` |
 
 <section class="color__combo color__combo--black">
   <span class="color__combo-header">Header</span>
@@ -50,11 +46,9 @@ Here are the most common color combinations we use:
 
 ### Blue
 
-* Background: PMS 632 C / ```#0091b2```
-* Headers & Links: PMS 108 C / ```#ffdb00```
-* Text: White / ```#ffffff```
-
-#### Example
+| Background                | Headers & Links           | Text                  |
+|---------------------------|---------------------------|-----------------------|
+| PMS 632 C / ```#0091b2``` | PMS 108 C / ```#ffdb00``` | White / ```#ffffff``` |
 
 <section class="color__combo color__combo--blue">
   <span class="color__combo-header">Header</span>
@@ -65,11 +59,9 @@ Here are the most common color combinations we use:
 
 ### Green
 
-* Background: PMS 368 C / ```#77bc1f```
-* Headers & Links: White / ```#ffffff```
-* Text: PMS Black 3 C / ```#212620```
-
-#### Example
+| Background                | Headers & Links       | Text                          |
+|---------------------------|-----------------------|-------------------------------|
+| PMS 368 C / ```#77bc1f``` | White / ```#ffffff``` | PMS Black 3 C / ```#212620``` |
 
 <section class="color__combo color__combo--green">
   <span class="color__combo-header">Header</span>
@@ -80,11 +72,9 @@ Here are the most common color combinations we use:
 
 ### Grayscale
 
-* Background: PMS Warm Gray 5 C / ```#aea198```
-* Headers & Links: White / ```#ffffff```
-* Text: PMS Black 3 C / ```#212620```
-
-#### Example
+| Background                        | Headers & Links       | Text                          |
+|-----------------------------------|-----------------------|-------------------------------|
+| PMS Warm Gray 5 C / ```#aea198``` | White / ```#ffffff``` | PMS Black 3 C / ```#212620``` |
 
 <section class="color__combo color__combo--gray">
   <span class="color__combo-header">Header</span>
