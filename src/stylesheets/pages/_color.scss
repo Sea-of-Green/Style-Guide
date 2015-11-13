@@ -104,3 +104,104 @@
     }
   }
 }
+
+.color {
+  &__palette-row {
+    @include row;
+  }
+  &__color {
+    @include clearfix;
+
+    margin-bottom: $gutter;
+    border: 1px solid $gray-1;
+    border-radius: 7px;
+
+    span {
+      @include span-columns(4);
+      @include omega;
+
+      margin-top: 0;
+
+      font-size: $small-font-size;
+    }
+  }
+  &__swatch {
+    @include span-columns(8);
+
+    height: ($base-line-height * 3) + 0.25rem; //magic number-ish
+
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+
+    &--yellow-1 {
+      background: $yellow-1;
+    }
+    &--yellow-2 {
+      background: $yellow-2;
+    }
+    &--yellow-3 {
+      background: $yellow-3;
+    }
+    &--yellow-4 {
+      background: $yellow-4;
+    }
+    &--yellow-5 {
+      background: $yellow-5;
+    }
+
+    &--green-1 {
+      background: $green-1;
+    }
+    &--green-2 {
+      background: $green-2;
+    }
+    &--green-3 {
+      background: $green-3;
+    }
+    &--green-4 {
+      background: $green-4;
+    }
+    &--green-5 {
+      background: $green-5;
+    }
+
+    &--blue-1 {
+      background: $blue-1;
+    }
+    &--blue-2 {
+      background: $blue-2;
+    }
+    &--blue-3 {
+      background: $blue-3;
+    }
+    &--blue-4 {
+      background: $blue-4;
+    }
+    &--blue-5 {
+      background: $blue-5;
+    }
+
+    &--white {
+      background: $white;
+      border-right: 1px solid $gray-1;
+    }
+    &--gray-1 {
+      background: $gray-1;
+    }
+    &--gray-2 {
+      background: $gray-2;
+    }
+    &--gray-3 {
+      background: $gray-3;
+    }
+    &--gray-4 {
+      background: $gray-4;
+    }
+    &--gray-5 {
+      background: $gray-5;
+    }
+    &--black {
+      background: $black;
+    }
+  }
+}

@@ -1,17 +1,24 @@
+var $  = function(el) {
+      return document.querySelector(el)
+    },
+    $$ = function(el) {
+      return document.querySelectorAll(el)
+    };
+
 // Send newsletter signup to Mailchimp
 function newsletterSignup() {
-  var email = document.getElementById('footer__newsletter-signup-input').value;
+  var email = $('#footer__newsletter-signup-input').value;
   var link = "http://sea-of-green.us7.list-manage2.com/subscribe?u=fdddde00588b5c6e72568d831&id=878c26efbd&MERGE0=";
   window.location.replace(link+email);
 }
 
 // Add Year to Copyright
 var year = new Date().getFullYear();
-document.getElementById('footer__copyright-year').innerHTML = year;
+$('#footer__copyright-year').innerHTML = year;
 
 // Add 'utm_source=sea-of-green' to external links
 var ref = "utm_source=sea-of-green&utm_medium=referral";
-var links = document.getElementsByTagName('a');
+var links = $$('a');
 for (i = 0; i < links.length; i++) {
   var a = new RegExp('/' + window.location.host + '/');
   if (!a.test(links[i].href) && links[i].href.search("sea-of-green") == -1) {
@@ -46,10 +53,10 @@ for (i = 0; i < links.length; i++) {
 smoothScroll.init();
 
 // Navigation
-var nav       = document.querySelector('.nav'),
-    navButton = document.querySelector('.nav__button'),
-    content   = document.querySelector('.style-guide'),
-    navLinks  = document.querySelectorAll('.nav__link a'),
+var nav       = $('.nav'),
+    navButton = $('.nav__button'),
+    content   = $('.style-guide'),
+    navLinks  = $$('.nav__link a'),
     toggleNav = function() {
       nav.classList.toggle('nav--open'); // Toggle links
       content.classList.toggle('style-guide--closed'); // Move content
@@ -59,8 +66,8 @@ navButton.addEventListener("click", function() {
   toggleNav();
 }, false);
 
-for(link = 0; link < navLinks.length; link++) {
-  navLinks[link].addEventListener("click", function() {
+[].forEach.call(navLinks, function (el) {
+  el.addEventListener("click", function() {
     toggleNav();
   }, false);
-}
+});

@@ -13,12 +13,3 @@ All of those things represent the Coke brand. And they’re applied consistently
 This guide exists to help you apply the Sea of Green brand with the same vigor. It will address things like color, typography, imagery, and tone of voice. Its goal is to help you make the Sea of Green brand as unique and recognizable as the Coke brand.
 
 Think about Sea of Green. What does it look like?
-
-## Downloads
-
-## Links
-
-* [Sea of Green Online Store](http://sea-of-green.com)
-* [Trello](http://trello.com/seaofgreen)
-* [GitHub](http://github.com/sea-of-green)
-* [Hands-on Hydro](http://handsonhydro.tumblr.com)

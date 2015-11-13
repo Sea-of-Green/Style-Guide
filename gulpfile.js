@@ -89,7 +89,7 @@ gulp.task('html:md', function() {
     .pipe(gulp.dest(paths.partialsPath))
 });
 
-gulp.task('html', ['html:md', 'sass', 'js'], function() {
+gulp.task('html', ['html:md'], function() {
   var sources = gulp.src([paths.js, paths.css], {read: false});
 
   return gulp.src([paths.templates, '!' + paths.partialsPath, '!' + paths.partials])
@@ -134,7 +134,7 @@ gulp.task('clean', function() {
   del('dist');
 });
 
-gulp.task('build', ['html'], function() {
+gulp.task('build', ['sass', 'js', 'html'], function() {
   return gulp.src('src/images/**')
     .pipe(gulp.dest('dist/images/'));
 });
