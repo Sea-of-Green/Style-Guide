@@ -15,17 +15,19 @@ The blue, yellow, and green each have 5 shades, two lighter and two darker than 
 <section class="color__palette">
   <!-- Yellow -->
   <h3>Yellow</h3>
-    <div class="color__color">
-      <div class="color__swatch color__swatch--yellow-1"></div>
-      <span>PMS 106 C<br />
-      <code>#fbe343</code><br />
-      <code>$yellow-1</code></span>
-    </div>
-    <div class="color__color">
-      <div class="color__swatch color__swatch--yellow-2"></div>
-      <span>PMS 107 C<br />
-      <code>#fee01e</code><br />
-      <code>$yellow-2</code></span>
+    <div class="color__group">
+      <div class="color__color">
+        <div class="color__swatch color__swatch--yellow-1"></div>
+        <span>PMS 106 C<br />
+        <code>#fbe343</code><br />
+        <code>$yellow-1</code></span>
+      </div>
+      <div class="color__color">
+        <div class="color__swatch color__swatch--yellow-2"></div>
+        <span>PMS 107 C<br />
+        <code>#fee01e</code><br />
+        <code>$yellow-2</code></span>
+      </div>
     </div>
     <div class="color__color">
       <div class="color__swatch color__swatch--yellow-3"></div>
@@ -33,31 +35,35 @@ The blue, yellow, and green each have 5 shades, two lighter and two darker than 
       <code>#ffdb00</code><br />
       <code>$yellow</code></span>
     </div>
-    <div class="color__color">
-      <div class="color__swatch color__swatch--yellow-4"></div>
-      <span>PMS 109 C<br />
-      <code>#ffd100</code><br />
-      <code>$yellow-4</code></span>
-    </div>
-    <div class="color__color">
-      <div class="color__swatch color__swatch--yellow-5"></div>
-      <span>PMS 110 C<br />
-      <code>#dba900</code><br />
-      <code>$yellow-5</code></span>
+    <div class="color__group">
+      <div class="color__color">
+        <div class="color__swatch color__swatch--yellow-4"></div>
+        <span>PMS 109 C<br />
+        <code>#ffd100</code><br />
+        <code>$yellow-4</code></span>
+      </div>
+      <div class="color__color">
+        <div class="color__swatch color__swatch--yellow-5"></div>
+        <span>PMS 110 C<br />
+        <code>#dba900</code><br />
+        <code>$yellow-5</code></span>
+      </div>
     </div>
   <!-- green -->
   <h3>Green</h3>
-    <div class="color__color">
-      <div class="color__swatch color__swatch--green-1"></div>
-      <span>PMS 366 C<br />
-      <code>#b7dc78</code><br />
-      <code>$green-1</code></span>
-    </div>
-    <div class="color__color">
-      <div class="color__swatch color__swatch--green-2"></div>
-      <span>PMS 367 C<br />
-      <code>#a3d55d</code><br />
-      <code>$green-2</code></span>
+    <div class="color__group">
+      <div class="color__color">
+        <div class="color__swatch color__swatch--green-1"></div>
+        <span>PMS 366 C<br />
+        <code>#b7dc78</code><br />
+        <code>$green-1</code></span>
+      </div>
+      <div class="color__color">
+        <div class="color__swatch color__swatch--green-2"></div>
+        <span>PMS 367 C<br />
+        <code>#a3d55d</code><br />
+        <code>$green-2</code></span>
+      </div>
     </div>
     <div class="color__color">
       <div class="color__swatch color__swatch--green-3"></div>
@@ -65,31 +71,35 @@ The blue, yellow, and green each have 5 shades, two lighter and two darker than 
       <code>#77bc1f</code><br />
       <code>$green</code></span>
     </div>
-    <div class="color__color">
-      <div class="color__swatch color__swatch--green-4"></div>
-      <span>PMS 369 C<br />
-      <code>#62a60a</code><br />
-      <code>$green-4</code></span>
-    </div>
-    <div class="color__color">
-      <div class="color__swatch color__swatch--green-5"></div>
-      <span>PMS 370 C<br />
-      <code>#648b1a</code><br />
-      <code>$green-5</code></span>
+    <div class="color__group">
+      <div class="color__color">
+        <div class="color__swatch color__swatch--green-4"></div>
+        <span>PMS 369 C<br />
+        <code>#62a60a</code><br />
+        <code>$green-4</code></span>
+      </div>
+      <div class="color__color">
+        <div class="color__swatch color__swatch--green-5"></div>
+        <span>PMS 370 C<br />
+        <code>#648b1a</code><br />
+        <code>$green-5</code></span>
+      </div>
     </div>
   <!-- blue -->
   <h3>Blue</h3>
-    <div class="color__color">
-      <div class="color__swatch color__swatch--blue-1"></div>
-      <span>PMS 630 C<br />
-      <code>#76c3d4</code><br />
-      <code>$blue-1</code></span>
-    </div>
-    <div class="color__color">
-      <div class="color__swatch color__swatch--blue-2"></div>
-      <span>PMS 631 C<br />
-      <code>#3ab0c8</code><br />
-      <code>$blue-2</code></span>
+    <div class="color__group">
+      <div class="color__color">
+        <div class="color__swatch color__swatch--blue-1"></div>
+        <span>PMS 630 C<br />
+        <code>#76c3d4</code><br />
+        <code>$blue-1</code></span>
+      </div>
+      <div class="color__color">
+        <div class="color__swatch color__swatch--blue-2"></div>
+        <span>PMS 631 C<br />
+        <code>#3ab0c8</code><br />
+        <code>$blue-2</code></span>
+      </div>
     </div>
     <div class="color__color">
       <div class="color__swatch color__swatch--blue-3"></div>
@@ -97,17 +107,19 @@ The blue, yellow, and green each have 5 shades, two lighter and two darker than 
       <code>#0091b2</code><br />
       <code>$blue</code></span>
     </div>
-    <div class="color__color">
-      <div class="color__swatch color__swatch--blue-4"></div>
-      <span>PMS 633 C<br />
-      <code>#007197</code><br />
-      <code>$blue-4</code></span>
-    </div>
-    <div class="color__color">
-      <div class="color__swatch color__swatch--blue-5"></div>
-      <span>PMS 634 C<br />
-      <code>#005c82</code><br />
-      <code>$blue-5</code></span>
+    <div class="color__group">
+      <div class="color__color">
+        <div class="color__swatch color__swatch--blue-4"></div>
+        <span>PMS 633 C<br />
+        <code>#007197</code><br />
+        <code>$blue-4</code></span>
+      </div>
+      <div class="color__color">
+        <div class="color__swatch color__swatch--blue-5"></div>
+        <span>PMS 634 C<br />
+        <code>#005c82</code><br />
+        <code>$blue-5</code></span>
+      </div>
     </div>
   <!-- gray -->
   <h3>Grayscale</h3>
@@ -117,17 +129,19 @@ The blue, yellow, and green each have 5 shades, two lighter and two darker than 
       <code>#ffffff</code><br />
       <code>$white</code></span>
     </div>
-    <div class="color__color">
-      <div class="color__swatch color__swatch--gray-1"></div>
-      <span>PMS 9080 C<br />
-      <code>#e5e1db</code><br />
-      <code>$gray-1</code></span>
-    </div>
-    <div class="color__color">
-      <div class="color__swatch color__swatch--gray-2"></div>
-      <span>PMS Warm Gray 1 C<br />
-      <code>#c1b8af</code><br />
-      <code>$gray-2</code></span>
+    <div class="color__group">
+      <div class="color__color">
+        <div class="color__swatch color__swatch--gray-1"></div>
+        <span>PMS 9080 C<br />
+        <code>#e5e1db</code><br />
+        <code>$gray-1</code></span>
+      </div>
+      <div class="color__color">
+        <div class="color__swatch color__swatch--gray-2"></div>
+        <span>PMS Warm Gray 1 C<br />
+        <code>#c1b8af</code><br />
+        <code>$gray-2</code></span>
+      </div>
     </div>
     <div class="color__color">
       <div class="color__swatch color__swatch--gray-3"></div>
@@ -135,17 +149,19 @@ The blue, yellow, and green each have 5 shades, two lighter and two darker than 
       <code>#aea198</code><br />
       <code>$gray</code></span>
     </div>
-    <div class="color__color">
-      <div class="color__swatch color__swatch--gray-4"></div>
-      <span>PMS Warm Gray 10 C<br />
-      <code>#7b6d65</code><br />
-      <code>$gray-4</code></span>
-    </div>
-    <div class="color__color">
-      <div class="color__swatch color__swatch--gray-5"></div>
-      <span>PMS 411 C<br />
-      <code>#60504c</code><br />
-      <code>$gray-5</code></span>
+    <div class="color__group">
+      <div class="color__color">
+        <div class="color__swatch color__swatch--gray-4"></div>
+        <span>PMS Warm Gray 10 C<br />
+        <code>#7b6d65</code><br />
+        <code>$gray-4</code></span>
+      </div>
+      <div class="color__color">
+        <div class="color__swatch color__swatch--gray-5"></div>
+        <span>PMS 411 C<br />
+        <code>#60504c</code><br />
+        <code>$gray-5</code></span>
+      </div>
     </div>
     <div class="color__color">
       <div class="color__swatch color__swatch--black"></div>

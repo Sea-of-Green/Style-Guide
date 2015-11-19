@@ -109,6 +109,15 @@
   &__palette-row {
     @include row;
   }
+  &__group {
+    @include row;
+    @include respond-to(medium) {
+      .color__color {
+        @include span-columns(6);
+        @include omega(2n);
+      }
+    }
+  }
   &__color {
     @include clearfix;
 
@@ -117,7 +126,7 @@
     border-radius: 7px;
 
     span {
-      @include span-columns(4);
+      @include span-columns(5);
       @include omega;
 
       margin-top: 0;
@@ -126,7 +135,7 @@
     }
   }
   &__swatch {
-    @include span-columns(8);
+    @include span-columns(7);
 
     height: ($base-line-height * 3) + 0.25rem; //magic number-ish
 
