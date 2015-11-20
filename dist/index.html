@@ -474,11 +474,121 @@
 <hr>
 <h1 id="elements"><a href="#elements" name="elements">Elements</a></h1>
 <h2 id="block-quotes"><a href="#block-quotes" name="block-quotes">Block Quotes</a></h2>
-<blockquote>
+<h4 id="standard-block-quote">Standard Block Quote</h4>
+<pre><code>&lt;blockquote&gt;
+  &lt;p&gt;...&lt;/p&gt;
+&lt;/blockquote&gt;
+</code></pre><blockquote>
 <p>A clayey jail’s horn comes with it the thought that the jugal column is a granddaughter. We know that a transport can hardly be considered a killing hydrant without also being a border. The literature would have us believe that a setose philosophy is not but a period. A moneyed health without juices is truly a carp of fiercest romanians.</p>
 </blockquote>
+<h4 id="block-quote-with-citation">Block Quote with Citation</h4>
+<pre><code>&lt;blockquote&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;cite&gt;&lt;a href=&quot;&quot;&gt;...&lt;/a&gt;&lt;/cite&gt;
+&lt;/blockquote&gt;
+</code></pre><blockquote>
+  <p>A clayey jail’s horn comes with it the thought that the jugal column is a granddaughter. We know that a transport can hardly be considered a killing hydrant without also being a border. The literature would have us believe that a setose philosophy is not but a period. A moneyed health without juices is truly a carp of fiercest romanians.</p>
+  <cite><a href="http://metaphorpsum.com/">Metaphorpsum</a></cite>
+</blockquote>
+
 <h2 id="buttons"><a href="#buttons" name="buttons">Buttons</a></h2>
+<h4 id="standard-button">Standard Button</h4>
+<pre><code>&lt;button class=&quot;btn&quot;&gt;...&lt;/button&gt;
+</code></pre><button class="btn">Button</button>
+
+<h4 id="reverse-button">Reverse Button</h4>
+<pre><code>&lt;button class=&quot;btn btn--reverse&quot;&gt;...&lt;/button&gt;
+</code></pre><button class="btn--reverse">Button</button>
+
+<h4 id="white-button">White Button</h4>
+<pre><code>&lt;button class=&quot;btn btn--white&quot;&gt;...&lt;/button&gt;
+</code></pre><button class="btn--white">Button</button>
+
+<h4 id="success-button">Success Button</h4>
+<pre><code>&lt;button class=&quot;btn btn--success&quot;&gt;...&lt;/button&gt;
+</code></pre><button class="btn--success">Success</button>
+
+<h4 id="warning-button">Warning Button</h4>
+<pre><code>&lt;button class=&quot;btn btn--warning&quot;&gt;...&lt;/button&gt;
+</code></pre><button class="btn--warning">Button</button>
+
+<h4 id="failure-button">Failure Button</h4>
+<pre><code>&lt;button class=&quot;btn btn--fail&quot;&gt;...&lt;/button&gt;
+</code></pre><button class="btn--fail">Button</button>
+
+<h4 id="link-as-button">Link as Button</h4>
+<pre><code>&lt;a class=&quot;btn&quot; href=&quot;...&quot;&gt;...&lt;/a&gt;
+</code></pre><p><a class="btn" href="#">Link</a></p>
 <h2 id="input-bar"><a href="#input-bar" name="input-bar">Input Bar</a></h2>
+<h4 id="standard-input-bar">Standard Input Bar</h4>
+<pre><code>&lt;form class=&quot;input-bar&quot;&gt;
+  &lt;input type=&quot;text&quot; placeholder=&quot;...&quot; /&gt;
+  &lt;button&gt;&lt;/button&gt;
+&lt;/form&gt;
+</code></pre><form class="input-bar">
+  <input type="text" placeholder="An Input Bar" />
+  <button></button>
+</form>
+
+<h4 id="search-bar">Search Bar</h4>
+<pre><code>&lt;form class=&quot;input-bar input-bar--search&quot;&gt;
+  &lt;input type=&quot;text&quot; placeholder=&quot;...&quot; /&gt;
+  &lt;button&gt;&lt;/button&gt;
+&lt;/form&gt;
+</code></pre><form class="input-bar input-bar--search">
+  <input type="text" placeholder="Type to Find a Product" />
+  <button></button>
+</form>
+
+<h4 id="email-bar">Email Bar</h4>
+<pre><code>&lt;form class=&quot;input-bar input-bar--email&quot;&gt;
+  &lt;input type=&quot;text&quot; placeholder=&quot;...&quot; /&gt;
+  &lt;button&gt;&lt;/button&gt;
+&lt;/form&gt;
+</code></pre><form class="input-bar input-bar--email">
+  <input type="text" placeholder="Sign Up For Our Newsletter" />
+  <button></button>
+</form>
+
+<h4 id="blue-input-bar">Blue Input Bar</h4>
+<pre><code>&lt;form class=&quot;input-bar input-bar--blue&quot;&gt;
+  &lt;input type=&quot;text&quot; placeholder=&quot;...&quot; /&gt;
+  &lt;button&gt;&lt;/button&gt;
+&lt;/form&gt;
+</code></pre><form class="input-bar input-bar--blue">
+  <input type="text" placeholder="An Input Bar" />
+  <button></button>
+</form>
+
+<h4 id="success-input-bar">Success Input Bar</h4>
+<pre><code>&lt;form class=&quot;input-bar input-bar--success&quot;&gt;
+  &lt;input type=&quot;text&quot; placeholder=&quot;...&quot; /&gt;
+  &lt;button&gt;&lt;/button&gt;
+&lt;/form&gt;
+</code></pre><form class="input-bar input-bar--success">
+  <input type="text" placeholder="Success!" />
+  <button></button>
+</form>
+
+<h4 id="warning-input-bar">Warning Input Bar</h4>
+<pre><code>&lt;form class=&quot;input-bar input-bar--warning&quot;&gt;
+  &lt;input type=&quot;text&quot; placeholder=&quot;...&quot; /&gt;
+  &lt;button&gt;&lt;/button&gt;
+&lt;/form&gt;
+</code></pre><form class="input-bar input-bar--warning">
+  <input type="text" placeholder="Warning" />
+  <button></button>
+</form>
+
+<h4 id="failure-input-bar">Failure Input Bar</h4>
+<pre><code>&lt;form class=&quot;input-bar input-bar--fail&quot;&gt;
+  &lt;input type=&quot;text&quot; placeholder=&quot;...&quot; /&gt;
+  &lt;button&gt;&lt;/button&gt;
+&lt;/form&gt;
+</code></pre><form class="input-bar input-bar--fail">
+  <input type="text" placeholder="Failure :(" />
+  <button></button>
+</form>
 
 <hr>
 <h1 id="downloads"><a href="#downloads" name="downloads">Downloads</a></h1>

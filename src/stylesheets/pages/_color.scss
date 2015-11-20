@@ -111,11 +111,9 @@
   }
   &__group {
     @include row;
-    @include respond-to(medium) {
-      .color__color {
-        @include span-columns(6);
-        @include omega(2n);
-      }
+    .color__color {
+      @include span-columns(6);
+      @include omega(2n);
     }
   }
   &__color {
@@ -137,7 +135,10 @@
   &__swatch {
     @include span-columns(7);
 
-    height: ($base-line-height * 3) + 0.25rem; //magic number-ish
+    height: ($base-line-height * 4) + 0.25rem; //magic number-ish
+    @include respond-to(medium) {
+      height: ($base-line-height * 3) + 0.25rem; //magic number-ish
+    }
 
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
