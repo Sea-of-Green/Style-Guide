@@ -2,9 +2,14 @@
 
 # Elements
 
+Of course, there are other pieces to the brand besides logo, color & typography. Some of those things are, simply enough, referred to as design elements.
+
 ## Block Quotes
 
+Block quotes are typically used for quotes from an outside source that are longer than a sentence or two. They can also be used for testimonials, product line descriptions, and anything else not authored by Sea of Green.
+
 #### Standard Block Quote
+
 ```
 <blockquote>
   <p>...</p>
@@ -27,7 +32,21 @@
   <cite><a href="http://metaphorpsum.com/">Metaphorpsum</a></cite>
 </blockquote>
 
+#### Block Quote without Opening Quotation
+
+```
+<blockquote class="no-quote">
+  <p>...</p>
+</blockquote>
+```
+
+<blockquote class="no-quote">
+  <p>A clayey jail's horn comes with it the thought that the jugal column is a granddaughter. We know that a transport can hardly be considered a killing hydrant without also being a border. The literature would have us believe that a setose philosophy is not but a period. A moneyed health without juices is truly a carp of fiercest romanians.</p>
+</blockquote>
+
 ## Buttons
+
+Buttons are clickable elements *that perform an action*. For example, if you have a clickable element that spawns an alert dialog, you should use a button. If you have a clickable element that takes you to another page (i.e., a hyperlink), use an anchor (```<a>```) element. A notable exception is when a link is *also* a call-to-action, e.g. links for checkout or pagination.
 
 #### Standard Button
 
@@ -87,6 +106,8 @@
 
 ## Input Bar
 
+The input bar should be used for any actionable user input, e.g. newsletter signup and search bars.
+
 #### Standard Input Bar
 
 ```
@@ -105,13 +126,13 @@
 
 ```
 <form class="input-bar input-bar--search">
-  <input type="text" placeholder="..." />
+  <input type="search" placeholder="..." />
   <button></button>
 </form>
 ```
 
 <form class="input-bar input-bar--search">
-  <input type="text" placeholder="Type to Find a Product" />
+  <input type="search" placeholder="Type to Find a Product" />
   <button></button>
 </form>
 
@@ -119,13 +140,13 @@
 
 ```
 <form class="input-bar input-bar--email">
-  <input type="text" placeholder="..." />
+  <input type="email" placeholder="..." />
   <button></button>
 </form>
 ```
 
 <form class="input-bar input-bar--email">
-  <input type="text" placeholder="Sign Up For Our Newsletter" />
+  <input type="email" placeholder="Sign Up For Our Newsletter" />
   <button></button>
 </form>
 

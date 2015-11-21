@@ -473,7 +473,9 @@
 
 <hr>
 <h1 id="elements"><a href="#elements" name="elements">Elements</a></h1>
+<p>Of course, there are other pieces to the brand besides logo, color &amp; typography. Some of those things are, simply enough, referred to as design elements.</p>
 <h2 id="block-quotes"><a href="#block-quotes" name="block-quotes">Block Quotes</a></h2>
+<p>Block quotes are typically used for quotes from an outside source that are longer than a sentence or two. They can also be used for testimonials, product line descriptions, and anything else not authored by Sea of Green.</p>
 <h4 id="standard-block-quote">Standard Block Quote</h4>
 <pre><code>&lt;blockquote&gt;
   &lt;p&gt;...&lt;/p&gt;
@@ -491,7 +493,16 @@
   <cite><a href="http://metaphorpsum.com/">Metaphorpsum</a></cite>
 </blockquote>
 
+<h4 id="block-quote-without-opening-quotation">Block Quote without Opening Quotation</h4>
+<pre><code>&lt;blockquote class=&quot;no-quote&quot;&gt;
+  &lt;p&gt;...&lt;/p&gt;
+&lt;/blockquote&gt;
+</code></pre><blockquote class="no-quote">
+  <p>A clayey jail’s horn comes with it the thought that the jugal column is a granddaughter. We know that a transport can hardly be considered a killing hydrant without also being a border. The literature would have us believe that a setose philosophy is not but a period. A moneyed health without juices is truly a carp of fiercest romanians.</p>
+</blockquote>
+
 <h2 id="buttons"><a href="#buttons" name="buttons">Buttons</a></h2>
+<p>Buttons are clickable elements <em>that perform an action</em>. For example, if you have a clickable element that spawns an alert dialog, you should use a button. If you have a clickable element that takes you to another page (i.e., a hyperlink), use an anchor (<code>&lt;a&gt;</code>) element. A notable exception is when a link is <em>also</em> a call-to-action, e.g. links for checkout or pagination.</p>
 <h4 id="standard-button">Standard Button</h4>
 <pre><code>&lt;button class=&quot;btn&quot;&gt;...&lt;/button&gt;
 </code></pre><button class="btn">Button</button>
@@ -520,6 +531,7 @@
 <pre><code>&lt;a class=&quot;btn&quot; href=&quot;...&quot;&gt;...&lt;/a&gt;
 </code></pre><p><a class="btn" href="#">Link</a></p>
 <h2 id="input-bar"><a href="#input-bar" name="input-bar">Input Bar</a></h2>
+<p>The input bar should be used for any actionable user input, e.g. newsletter signup and search bars.</p>
 <h4 id="standard-input-bar">Standard Input Bar</h4>
 <pre><code>&lt;form class=&quot;input-bar&quot;&gt;
   &lt;input type=&quot;text&quot; placeholder=&quot;...&quot; /&gt;
@@ -532,21 +544,21 @@
 
 <h4 id="search-bar">Search Bar</h4>
 <pre><code>&lt;form class=&quot;input-bar input-bar--search&quot;&gt;
-  &lt;input type=&quot;text&quot; placeholder=&quot;...&quot; /&gt;
+  &lt;input type=&quot;search&quot; placeholder=&quot;...&quot; /&gt;
   &lt;button&gt;&lt;/button&gt;
 &lt;/form&gt;
 </code></pre><form class="input-bar input-bar--search">
-  <input type="text" placeholder="Type to Find a Product" />
+  <input type="search" placeholder="Type to Find a Product" />
   <button></button>
 </form>
 
 <h4 id="email-bar">Email Bar</h4>
 <pre><code>&lt;form class=&quot;input-bar input-bar--email&quot;&gt;
-  &lt;input type=&quot;text&quot; placeholder=&quot;...&quot; /&gt;
+  &lt;input type=&quot;email&quot; placeholder=&quot;...&quot; /&gt;
   &lt;button&gt;&lt;/button&gt;
 &lt;/form&gt;
 </code></pre><form class="input-bar input-bar--email">
-  <input type="text" placeholder="Sign Up For Our Newsletter" />
+  <input type="email" placeholder="Sign Up For Our Newsletter" />
   <button></button>
 </form>
 

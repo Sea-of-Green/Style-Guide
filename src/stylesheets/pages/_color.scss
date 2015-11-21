@@ -124,24 +124,41 @@
     border-radius: 7px;
 
     span {
-      @include span-columns(5);
-      @include omega;
+      @include respond-to(medium) {
+        @include span-columns(5);
+        @include omega;
+
+        padding: $gutter*0.25 0;
+      }
+
+      display: block;
 
       margin-top: 0;
+      padding: $gutter*0.25 $gutter*0.5;
 
       font-size: $small-font-size;
+
+      code {
+        background: none;
+      }
     }
   }
   &__swatch {
-    @include span-columns(7);
-
-    height: ($base-line-height * 4) + 0.25rem; //magic number-ish
     @include respond-to(medium) {
-      height: ($base-line-height * 3) + 0.25rem; //magic number-ish
+      @include span-columns(7);
+
+      height: ($base-line-height * 3) + 0.75rem; //magic number-ish
+
+      border-bottom-left-radius: 7px;
+      border-top-right-radius: 0;
     }
 
+    width: 100%;
+    height: ($base-line-height * 2) + 0.25rem; //magic number-ish
+
     border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 7px;
 
     &--yellow-1 {
       background: $yellow-1;
@@ -193,7 +210,11 @@
 
     &--white {
       background: $white;
-      border-right: 1px solid $gray-1;
+      border-bottom: 1px solid $gray-1;
+      @include respond-to(medium) {
+        border-bottom: 0;
+        border-right: 1px solid $gray-1;
+      }
     }
     &--gray-1 {
       background: $gray-1;
