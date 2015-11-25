@@ -36,7 +36,7 @@
   a {
     color: $yellow;
 
-    &:hover {
+    @include on-event {
       color: $yellow;
     }
   }
@@ -57,8 +57,29 @@
   a {
     color: $yellow;
 
-    &:hover {
+    @include on-event {
       color: $yellow;
+    }
+  }
+}
+
+.color__combo--yellow {
+  background: $yellow;
+
+  .color__combo-header {
+    color: $blue;
+  }
+  .color__combo-subhead {
+    color: $black;
+  }
+  p {
+    color: $black;
+  }
+  a {
+    color: $blue;
+
+    @include on-event {
+      color: $blue;
     }
   }
 }
@@ -78,7 +99,7 @@
   a {
     color: $white;
 
-    &:hover {
+    @include on-event {
       color: $white;
     }
   }
@@ -99,7 +120,7 @@
   a {
     color: $white;
 
-    &:hover {
+    @include on-event {
       color: $white;
     }
   }

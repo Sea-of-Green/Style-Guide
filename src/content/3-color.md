@@ -217,6 +217,19 @@ Here are the most common color combinations we use:
   <p>A clayey jail's horn comes with it the thought that the jugal column is a granddaughter. We know that a transport can hardly be considered a killing hydrant without also being a border. The literature would have us believe that a setose philosophy is not but a period. A moneyed health without juices is truly a carp of fiercest romanians.</p>
 </section>
 
+### Yellow
+
+| Background                | Headers & Links           | Text                          |
+|---------------------------|---------------------------|-------------------------------|
+| PMS 108 C / ```#ffdb00``` | PMS 632 C / ```#0091b2``` | PMS Black 3 C / ```#212620``` |
+
+<section class="color__combo color__combo--yellow">
+  <span class="color__combo-header">Header</span>
+  <span class="color__combo-subhead">Sub Header</span>
+  <p>A vise is a heinous shovel. The loaded engine reveals itself as an afire island to those who look. A station of the colt is <a href="#">assumed to be a hefty tenor</a>. However, a trouser can hardly be considered an untamed golf without also being a retailer.</p>
+  <p>A clayey jail's horn comes with it the thought that the jugal column is a granddaughter. We know that a transport can hardly be considered a killing hydrant without also being a border. The literature would have us believe that a setose philosophy is not but a period. A moneyed health without juices is truly a carp of fiercest romanians.</p>
+</section>
+
 ### Green
 
 | Background                | Headers & Links       | Text                          |

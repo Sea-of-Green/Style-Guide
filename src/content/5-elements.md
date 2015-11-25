@@ -32,15 +32,39 @@ Block quotes are typically used for quotes from an outside source that are longe
   <cite><a href="http://metaphorpsum.com/">Metaphorpsum</a></cite>
 </blockquote>
 
-#### Block Quote without Opening Quotation
+#### Question Block Quote
 
 ```
-<blockquote class="no-quote">
+<blockquote class="blockquote--question">
   <p>...</p>
 </blockquote>
 ```
 
-<blockquote class="no-quote">
+<blockquote class="blockquote--question">
+  <p>A clayey jail's horn comes with it the thought that the jugal column is a granddaughter. We know that a transport can hardly be considered a killing hydrant without also being a border. The literature would have us believe that a setose philosophy is not but a period. A moneyed health without juices is truly a carp of fiercest romanians.</p>
+</blockquote>
+
+#### Answer Block Quote
+
+```
+<blockquote class="blockquote--answer">
+  <p>...</p>
+</blockquote>
+```
+
+<blockquote class="blockquote--answer">
+  <p>A clayey jail's horn comes with it the thought that the jugal column is a granddaughter. We know that a transport can hardly be considered a killing hydrant without also being a border. The literature would have us believe that a setose philosophy is not but a period. A moneyed health without juices is truly a carp of fiercest romanians.</p>
+</blockquote>
+
+#### Block Quote without Symbol
+
+```
+<blockquote class="blockquote--no-quote">
+  <p>...</p>
+</blockquote>
+```
+
+<blockquote class="blockquote--no-quote">
   <p>A clayey jail's horn comes with it the thought that the jugal column is a granddaughter. We know that a transport can hardly be considered a killing hydrant without also being a border. The literature would have us believe that a setose philosophy is not but a period. A moneyed health without juices is truly a carp of fiercest romanians.</p>
 </blockquote>
 
@@ -86,7 +110,7 @@ Buttons are clickable elements *that perform an action*. For example, if you hav
 <button class="btn btn--warning">...</button>
 ```
 
-<button class="btn--warning">Button</button>
+<button class="btn--warning">Warning</button>
 
 #### Failure Button
 
@@ -94,7 +118,7 @@ Buttons are clickable elements *that perform an action*. For example, if you hav
 <button class="btn btn--fail">...</button>
 ```
 
-<button class="btn--fail">Button</button>
+<button class="btn--fail">Failure</button>
 
 #### Link as Button
 
