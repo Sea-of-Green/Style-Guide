@@ -1,0 +1,65 @@
+.photo {
+  &__header {
+    @extend h1;
+  }
+
+  &--image {
+    border: 1px solid $gray-1;
+  }
+  &__image {
+    @include clearfix;
+
+    display: block;
+
+    width: 100%;
+    height: 250px;
+
+    background-image: url('/images/6-photo.jpeg');
+    background-size: cover;
+  }
+  &__img-content {
+    padding: $base-line-height $gutter 1px;
+  }
+
+  &--background {
+    position: relative;
+
+    padding: $base-line-height $gutter 1px;
+
+    background: $green;
+
+    &:before {
+      content: '';
+
+      @include position(absolute, 0 0 0 0);
+
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      background-image: url('/images/6-photo.jpeg');
+      background-size: cover;
+
+      opacity: 0.1;
+
+      z-index: 1;
+    }
+  }
+  &__bg-content {
+    position: relative;
+
+    z-index: 2;
+
+    h1 {
+      color: $white;
+    }
+    a {
+      color: $white;
+
+      @include on-event {
+        color: $white;
+      }
+    }
+  }
+}
