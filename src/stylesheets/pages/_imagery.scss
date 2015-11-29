@@ -63,3 +63,43 @@
     }
   }
 }
+
+.pattern {
+  position: relative;
+
+  width: 100%;
+  height: 250px;
+
+  margin-bottom: $base-line-height;
+
+  border: 1px solid $gray-1;
+  border-radius: 7px;
+
+  overflow: hidden;
+
+  &--level {
+    background-image: url('/images/6-pattern.png');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 50px;
+  }
+
+  &--rotated:before {
+    content: '';
+
+    position: absolute;
+    top: -100%; left: -100%;
+
+    width: 300%;
+    height: 300%;
+
+    background-image: url('/images/6-pattern.png');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 50px;
+
+    transform: rotate(-32deg);
+
+    z-index: -1;
+  }
+}

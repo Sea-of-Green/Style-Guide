@@ -4,7 +4,11 @@
 
 ## Photos
 
+Photography is a very powerful medium. It can invoke emotion and ideas in a way few other things can. Unfortunately, it's also very visually distracting if used improperly. At Sea of Green, we have a few very basic rules to avoid that.
+
 ### Photography as Image
+
+When using a photograph to specifically evoke an emotion or moment, it should be completely separated from text and logos and left in it's original colors. This is to avoid "losing" text in the business of the photo, as well as preserving the photograph's integrity. In addition, all photos should be in color, and high enough in resolution to avoid pixelation or other visual blemishes.
 
 <section class="photo photo--image">
   <div class="photo__image"></div>
@@ -29,13 +33,17 @@ When using photos as a background, you should always use a color overlay to incr
   </div>
 </section>
 
+### Photograph Sourcing
+
+Ideally, any photo we use should be shot specifically for use by Sea of Green. Unfortunately, that is not always a viable option for various reasons. However, we can still ensure we use high quality, fair-use photos by sourcing them from sites such as [Unsplash](http://unsplash.com) or [FindA.Photo](http://finda.photo).
+
 ## Patterns
 
-Currently, there is only one official pattern. It is often applied at a 32&deg; angle.
+Currently, there is only one official pattern. It is built out of the Sea of Green icon, and often applied at a 32&deg; angle. As with photography, text should never be laid directly over text.
 
 #### Icon Pattern
 
-<div class="pattern"></div>
+<div class="pattern pattern--level"></div>
 
 #### Rotated Icon Pattern
 
