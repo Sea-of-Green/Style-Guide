@@ -48,3 +48,15 @@ Currently, there is only one official pattern. It is built out of the Sea of Gre
 #### Rotated Icon Pattern
 
 <div class="pattern pattern--rotated"></div>
+
+## Illustration
+
+Sea of Green uses a few specific rules for illustration. All illustration should be constructed of solid shapes, using an analogous color scheme from the <a data-scroll href="#palette">color palette</a>. Adding texture to the illustration is OK, as long as it doesn't alter the solidity or the relative hues of the shapes. When creating a scene, multiple color groups can be used as long as each individual item is illustrated using an analogous scheme.
+
+#### Solid Illustration
+
+![Solid-shape illustration of various CO2 generation methods](/images/6-solid-illustration.png)
+
+#### Illustration with Texture
+
+![Textured illustration](/images/6-texture-illustration.png)

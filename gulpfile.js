@@ -128,16 +128,29 @@ gulp.task('js', function() {
     }));
 });
 
-// Clean & Build
+// Move stuff
 
-gulp.task('clean', function() {
-  del('dist');
-});
-
-gulp.task('build', ['sass', 'js', 'html'], function() {
+gulp.task('images', function() {
   return gulp.src('src/images/**')
     .pipe(gulp.dest('dist/images/'));
 });
+
+gulp.task('downloads', function() {
+  return gulp.src('src/downloads/**')
+    .pipe(gulp.dest('dist/downloads/'));
+});
+
+// Clean & Build
+
+gulp.task('clean', function() {
+  del([cssPath, jsPath, 'dist/index.html']);
+});
+
+gulp.task('clean:all', function() {
+  del('dist');
+});
+
+gulp.task('build', ['sass', 'js', 'html', 'images', 'downloads']);
 
 // Servers & Watch
 
