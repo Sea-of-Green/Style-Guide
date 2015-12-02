@@ -16,6 +16,7 @@ var md = require('gulp-markdown');
 var uglify = require('gulp-uglify');
 // Servers
 var browserSync = require('browser-sync');
+var surge = require('gulp-surge');
 
 var paths = {
   src: 'src/',
@@ -140,6 +141,11 @@ gulp.task('downloads', function() {
     .pipe(gulp.dest('dist/downloads/'));
 });
 
+gulp.task('fonts', function() {
+  return gulp.src('src/fonts/**')
+    .pipe(gulp.dest('dist/fonts/'));
+});
+
 // Clean & Build
 
 gulp.task('clean', function() {
@@ -150,7 +156,7 @@ gulp.task('clean:all', function() {
   del('dist');
 });
 
-gulp.task('build', ['sass', 'js', 'html', 'images', 'downloads']);
+gulp.task('build', ['sass', 'js', 'html', 'images', 'downloads', 'fonts']);
 
 // Servers & Watch
 
@@ -167,4 +173,18 @@ gulp.task('watch', ['browserSync', 'build'], function () {
   gulp.watch(paths.templates, ['html']);
   gulp.watch(paths.content, ['html']);
   gulp.watch(paths.scripts, ['js']);
+});
+
+gulp.task('deploy', function() {
+  return surge({
+    project: './dist',         // Path to your static build directory
+    domain: 'sog-style-guide.surge.sh'  // Your domain or Surge subdomain
+  });
+});
+
+gulp.task('build:deploy', ['build'], function() {
+  return surge({
+    project: './dist',         // Path to your static build directory
+    domain: 'sog-style-guide.surge.sh'  // Your domain or Surge subdomain
+  });
 });

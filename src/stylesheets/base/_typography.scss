@@ -53,7 +53,7 @@ h3 {
   margin-bottom: $base-line-height;
 }
 h4, h5, h6 {
-  @include font(heading-text, medium);
+  @include font(heading-text);
 
   font-size: $h4-font-size;
   line-height: $h4-line-height;

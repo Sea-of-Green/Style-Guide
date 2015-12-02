@@ -49,6 +49,6 @@ Vertical rhythm is a huge influencer on the way text is read. It's important to 
 
 Rounding out font sizes, consistent application of weights is also hugely important. Luckily, it's also the easiest of the three principals to apply. Below is a table that shows the weights at the font sizes from above. Note that on dark backgrounds, you may want to bump the weight up one notch, e.g. Medium (500) to Semi-bold (600).
 
-| Heading 1  | Heading 2  | Heading 3    | Heading 4    | Base          |
-|------------|------------|--------------|--------------|---------------|
-| Bold (700) | Bold (700) | Medium (500) | Medium (500) | Regular (400) |
+| Heading 1  | Heading 2  | Heading 3    | Heading 4     | Base          |
+|------------|------------|--------------|---------------|---------------|
+| Bold (700) | Bold (700) | Medium (500) | Regular (400) | Regular (400) |
