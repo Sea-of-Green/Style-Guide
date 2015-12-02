@@ -53,23 +53,22 @@ h3 {
   margin-bottom: $base-line-height;
 }
 h4, h5, h6 {
-  @include font(heading-text);
+  @include font(heading-text, medium);
 
   font-size: $h4-font-size;
   line-height: $h4-line-height;
 
   margin-top: $base-line-height;
   margin-bottom: $base-line-height;
-}
-h4 {
-  text-transform: capitalize;
+
+  text-transform: uppercase;
 }
 h5 {
-  text-transform: uppercase;
+  letter-spacing: 0.3em;
 }
 h6 {
   letter-spacing: 0.3em;
-  text-transform: uppercase;
+  font-weight: 400;
 }
 p, ul, ol, pre, table, blockquote {
   max-width: $measure;
