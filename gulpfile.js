@@ -78,6 +78,10 @@ gulp.task('sass:debug', function() {
     .pipe(gulp.dest(paths.cssPath));
 });
 
+gulp.task('clean:css', function() {
+  del(paths.cssPath);
+});
+
 // HTML
 
 gulp.task('html:md', function() {
@@ -116,6 +120,10 @@ gulp.task('html', ['html:md'], function() {
     }));
 });
 
+gulp.task('clean:js', function() {
+  del('dist/**/*.html');
+});
+
 // Javascript
 
 gulp.task('js', function() {
@@ -127,6 +135,10 @@ gulp.task('js', function() {
     .pipe(browserSync.reload({
       stream: true
     }));
+});
+
+gulp.task('clean:js', function() {
+  del(paths.jsPath);
 });
 
 // Move stuff
@@ -178,13 +190,13 @@ gulp.task('watch', ['browserSync', 'build'], function () {
 gulp.task('deploy', function() {
   return surge({
     project: './dist',         // Path to your static build directory
-    domain: 'sog-style-guide.surge.sh'  // Your domain or Surge subdomain
+    domain: 'style.sea-of-green.com'  // Your domain or Surge subdomain
   });
 });
 
 gulp.task('build:deploy', ['build'], function() {
   return surge({
     project: './dist',         // Path to your static build directory
-    domain: 'sog-style-guide.surge.sh'  // Your domain or Surge subdomain
+    domain: 'style.sea-of-green.com'  // Your domain or Surge subdomain
   });
 });
