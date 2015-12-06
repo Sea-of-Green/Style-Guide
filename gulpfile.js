@@ -3,7 +3,7 @@ var del = require('del');
 var concat = require('gulp-concat');
 // Sass & CSS
 var sass = require('gulp-sass');
-var neat = require('node-neat');
+var neat = require('node-neat').includePaths;
 var autoprefixer = require('gulp-autoprefixer');
 var cmq = require('gulp-combine-media-queries');
 var csso = require('gulp-csso');
@@ -13,6 +13,7 @@ var include = require('gulp-file-include');
 var toc = require('gulp-toc');
 var md = require('gulp-markdown');
 // Javascript
+var coffee = require('gulp-coffee');
 var uglify = require('gulp-uglify');
 // Servers
 var browserSync = require('browser-sync');
@@ -33,18 +34,14 @@ var paths = {
 
   sassPath: 'src/stylesheets/',
   sass: 'src/stylesheets/*.scss',
-
-  scriptsPath: 'src/scripts/',
-  scripts: 'src/scripts/**/*.js',
-
   cssPath: 'dist/css',
   css: 'dist/css/**/*.css',
 
+  coffeePath: 'src/scripts/',
+  coffee: 'src/scripts/**/*.coffee',
   jsPath: 'dist/js',
   js: 'dist/js/**/*.js'
 }
-
-var neatPaths = neat.includePaths;
 
 var ignoreRegex = [/([\S])+(?=[closed])\w+/, /([\S])+(?=[open])\w+/];
 
@@ -55,7 +52,7 @@ gulp.task('default', ['build']);
 gulp.task('sass', function() {
   return gulp.src(paths.sass)
     .pipe(sass({
-      includePaths: neatPaths
+      includePaths: neat
     }))
     .pipe(cmq())
     .pipe(autoprefixer())
@@ -70,7 +67,7 @@ gulp.task('sass:debug', function() {
   return gulp.src(paths.sass)
     .pipe(sass({
       outputStyle: 'nested',
-      includePaths: neatPaths
+      includePaths: neat
     }))
     .pipe(sass().on('error', sass.logError))
     .pipe(cmq())
@@ -120,24 +117,38 @@ gulp.task('html', ['html:md'], function() {
     }));
 });
 
-gulp.task('clean:js', function() {
+gulp.task('clean:html', function() {
   del('dist/**/*.html');
 });
 
 // Javascript
 
-gulp.task('js', function() {
-  return gulp.src(paths.scripts)
-    .pipe(uglify({
-      mangle: true
+gulp.task('coffee', function() {
+  return gulp.src(paths.coffee)
+    .pipe(coffee({
+      bare: true
     }))
+    .pipe(uglify())
+    .pipe(concat('main.js'))
     .pipe(gulp.dest(paths.jsPath))
     .pipe(browserSync.reload({
       stream: true
     }));
 });
 
-gulp.task('clean:js', function() {
+gulp.task('coffee:debug', function() {
+  return gulp.src(paths.coffee)
+    .pipe(coffee({
+      bare: true
+    }))
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest(paths.jsPath))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
+});
+
+gulp.task('clean:coffee', function() {
   del(paths.jsPath);
 });
 
@@ -168,7 +179,7 @@ gulp.task('clean:all', function() {
   del('dist');
 });
 
-gulp.task('build', ['sass', 'js', 'html', 'images', 'downloads', 'fonts']);
+gulp.task('build', ['sass', 'coffee', 'html', 'images', 'downloads', 'fonts']);
 
 // Servers & Watch
 
@@ -184,7 +195,7 @@ gulp.task('watch', ['browserSync', 'build'], function () {
   gulp.watch(paths.sass, ['sass']);
   gulp.watch(paths.templates, ['html']);
   gulp.watch(paths.content, ['html']);
-  gulp.watch(paths.scripts, ['js']);
+  gulp.watch(paths.coffee, ['coffee']);
 });
 
 gulp.task('deploy', function() {

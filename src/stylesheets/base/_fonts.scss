@@ -60,13 +60,13 @@
 
 @include font-face(
   "Overlook",
-  "/fonts/ATCOverlook-Medium",
+  "/fonts/ATCOverlook-Medium-webfont",
   $weight: 500,
   $file-formats: woff2);
 
 @include font-face(
   "Overlook",
-  "/fonts/ATCOverlook-MediumItalic",
+  "/fonts/ATCOverlook-MediumItalic-webfont",
   $weight: 500,
   $style: italic,
   $file-formats: woff2);
