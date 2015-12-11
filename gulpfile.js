@@ -13,7 +13,6 @@ var include = require('gulp-file-include');
 var toc = require('gulp-toc');
 var md = require('gulp-markdown');
 // Javascript
-var coffee = require('gulp-coffee');
 var uglify = require('gulp-uglify');
 // Servers
 var browserSync = require('browser-sync');
@@ -37,8 +36,8 @@ var paths = {
   cssPath: 'dist/css',
   css: 'dist/css/**/*.css',
 
-  coffeePath: 'src/scripts/',
-  coffee: 'src/scripts/**/*.coffee',
+  scriptsPath: 'src/scripts/',
+  scripts: 'src/scripts/**/*.js',
   jsPath: 'dist/js',
   js: 'dist/js/**/*.js'
 }
@@ -123,11 +122,8 @@ gulp.task('clean:html', function() {
 
 // Javascript
 
-gulp.task('coffee', function() {
-  return gulp.src(paths.coffee)
-    .pipe(coffee({
-      bare: true
-    }))
+gulp.task('js', function() {
+  return gulp.src(paths.scripts)
     .pipe(uglify())
     .pipe(concat('main.js'))
     .pipe(gulp.dest(paths.jsPath))
@@ -136,11 +132,8 @@ gulp.task('coffee', function() {
     }));
 });
 
-gulp.task('coffee:debug', function() {
-  return gulp.src(paths.coffee)
-    .pipe(coffee({
-      bare: true
-    }))
+gulp.task('js:debug', function() {
+  return gulp.src(paths.scripts)
     .pipe(concat('main.js'))
     .pipe(gulp.dest(paths.jsPath))
     .pipe(browserSync.reload({
@@ -148,7 +141,7 @@ gulp.task('coffee:debug', function() {
     }));
 });
 
-gulp.task('clean:coffee', function() {
+gulp.task('clean:js', function() {
   del(paths.jsPath);
 });
 
@@ -179,7 +172,7 @@ gulp.task('clean:all', function() {
   del('dist');
 });
 
-gulp.task('build', ['sass', 'coffee', 'html', 'images', 'downloads', 'fonts']);
+gulp.task('build', ['sass', 'js', 'html', 'images', 'downloads', 'fonts']);
 
 // Servers & Watch
 
@@ -195,7 +188,7 @@ gulp.task('watch', ['browserSync', 'build'], function () {
   gulp.watch(paths.sass, ['sass']);
   gulp.watch(paths.templates, ['html']);
   gulp.watch(paths.content, ['html']);
-  gulp.watch(paths.coffee, ['coffee']);
+  gulp.watch(paths.scripts, ['js']);
 });
 
 gulp.task('deploy', function() {
