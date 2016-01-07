@@ -3,79 +3,27 @@
 // -----------------------------------------------------------------------------
 
 .nav {
+  overflow-y: hidden;
+
   z-index: z(nav);
 
-  &__bar {
-    @include fill-parent;
-    @include position(fixed, 0 0 null 0);
+  width: rem(350);
 
-    height: $nav-height;
-
-    background: $blue;
-    color: $white;
-
-    z-index: z(nav__bar);
-
-    transition: left 0.3s cubic-bezier(0.4, 0.2, 0.2, 1.25);
-  }
-
-  &__button {
-    float: left;
-
-    width: $gutter + rem(45);
-
-    margin-left: $gutter;
-    margin-top: $gutter;
-
-    cursor: pointer;
-  }
-  &__button-line {
-    width: 45px;
-    height: 5px;
-
-    border-radius: 7px;
-
-    background: $white;
-
-    transition: transform 0.4s cubic-bezier(0.75, -0.2, 0.2, 1.25), background 0.3s ease;
-
-    &:not(:last-child) {
-      margin-bottom: 5px;
-    }
-  }
-
-  &__title {
-    @extend h2;
-    @include outer-container($max-width - 2);
-
-    display: block;
-
-    margin-top: 0;
-
-    font-weight: 500;
-    color: $white;
-  }
+  background: $gray-1;
 
   &__content {
-    @include position(fixed, $nav-height 0 0 (-$nav-width) );
+    @include pad;
 
-    height: calc(100vh - #{$nav-height});
-    width: $nav-width;
+    width: rem(350);
 
-    padding: 0.75rem $gutter 0;
-
-    background: $gray-1;
-    // background: linear-gradient(to bottom, $blue $nav-height, $blue-5);
-
-    z-index: z(nav__content);
-
-    overflow-y: auto;
-
-    transition: left 0.3s cubic-bezier(0.4, 0.2, 0.2, 1.25);
+    position: fixed;
+    left: 0;
+    top: 0;
   }
-  &__list {
+
+  &__links {
     margin: 0;
-    padding:0;
+    padding: 0;
 
     list-style-type: none;
   }

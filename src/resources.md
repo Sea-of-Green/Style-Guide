@@ -1,6 +1,7 @@
 ---
 title: Resources
 slug: resources
+collection: pages
 ---
 
 ## Downloads

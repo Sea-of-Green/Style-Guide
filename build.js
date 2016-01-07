@@ -15,46 +15,49 @@ var uglify     = require('metalsmith-uglify');
 Metalsmith(__dirname)
   .source('src')
   .destination('dist')
-  // HTML
-  .use(branch('**/*.md')
-    .use(collections({
-      visuals: {
-        pattern: 'content/visuals/**/*.md'
-      },
-      text: {
-        pattern: 'content/text/**/*.md'
-      },
-      pages: {
-        pattern: 'content/*.md'
-      }
-    }))
-    .use(layouts({
-      'engine': 'jade',
-      'directory': 'templates',
-      'default': 'default.jade'
-    }))
-    .use(markdown({
-      'gfm': true,
-      'smartypants': true
-    }))
-    .use(permalinks(':slug'))
-  )
   // CSS
-  .use(branch('stylesheets/**/*.scss')
-    .use(sass({
-      includePaths: bourbon,
-      outputStyle: 'compressed',
-      outputDir: 'css/'
-    }))
-    .use(prefix())
-  )
+  .use(sass({
+    includePaths: bourbon,
+    outputStyle: 'compressed',
+    outputDir: 'css/'
+  }))
+  .use(prefix())
   // JS
-  .use(branch('scripts/**/*.js')
-    .use(uglify({
-      concat: 'js/main.js',
-      removeOriginal: true
+  .use(uglify({
+    concat: 'js/main.js',
+    removeOriginal: true
     }))
-  )
+  // HTML
+  .use(collections({
+    visuals: {
+      pattern: 'visuals/**/*.md'
+    },
+    text: {
+      pattern: 'text/**/*.md'
+    },
+    pages: {
+      pattern: '*.md'
+    }
+  }))
+  .use(layouts({
+    engine: 'jade',
+    directory: 'templates',
+    default: 'default.jade',
+    pattern: '**/*.md'
+  }))
+  .use(markdown({
+    gfm: true,
+    smartypants: true,
+    tables: true
+  }))
+  .use(permalinks({
+    pattern: ':collection/:slug',
+    relative: false,
+    linksets: [{
+      match: { collection: 'pages' },
+      pattern: ':slug',
+    }]
+  }))
   .build(function(err) {
     if (err) throw err;
   });

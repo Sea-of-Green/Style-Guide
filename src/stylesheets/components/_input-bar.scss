@@ -18,8 +18,8 @@
 .input-bar {
   @include clearfix;
 
-  //width: 100%;
-  max-width: $measure;
+  // width: 100%;
+  // max-width: $measure;
   margin: $base-font-size auto;
 
   input {

@@ -3,16 +3,17 @@ html
   head
     include partials/_head.jade
   body
-    include partials/_nav.jade
+    .container
+      include partials/_nav.jade
 
-    if contents
       main(role="main", class="content")
-        h1= title
-        | #{contents}
-    else
-      main(role="main", class="content")
-        h1 Oops!
-        p Looks like we've misplaced something. <a href="/">Head Home</a>?
+
+        if contents
+          h1= title
+          != contents
+        else
+          h1 Oops!
+          p Looks like we've misplaced something. <a href="/">Head Home</a>?
 
     include partials/_footer.jade
     include partials/_scripts.jade

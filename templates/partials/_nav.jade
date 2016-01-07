@@ -1,26 +1,25 @@
 nav.nav(role="navigation")
 
-  .nav__bar
-    .nav__button
-      .nav__button-line
-      .nav__button-line
-      .nav__button-line
-    span.nav__title= title
+  .nav__content
 
-  ul.nav__links
+    h3 Sea of Green Style Guide
+    hr
 
-    li.nav__link.nav__link--section
-      a(href="/") Introduction
-
-    each page, title in collections.pages
+    ul.nav__links
 
       li.nav__link.nav__link--section
-        a(href="/#{page.slug}")= page.title
+        a(href="/") Introduction
 
-        if page.children
-          ul
-            each collection, name in collections
-              if name == page.children
-                for post in collection
-                  li.nav__link.nav__link--part
-                    a(href="/#{post.slug}")= post.title
+      each page, title in collections.pages
+
+        if page.title != "Introduction"
+          li.nav__link.nav__link--section
+            a(href="/#{page.slug}")= page.title
+
+          if page.children
+            ul
+              each collection, name in collections
+                if name == page.children
+                  for post in collection
+                    li.nav__link.nav__link--part
+                      a(href="/#{name}/#{post.slug}")= post.title

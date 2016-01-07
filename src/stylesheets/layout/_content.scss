@@ -1,3 +1,4 @@
+/*
 .style-guide {
   position: relative;
   left: 0;
@@ -18,4 +19,24 @@
   margin-top: $nav-height + $base-line-height;
 
   z-index: z(content);
+}
+*/
+
+.container {
+  display: flex;
+
+  width: 100%;
+  min-height: 100vh;
+}
+
+.nav {
+  flex: 0 1 auto;
+
+  width: rem(350);
+}
+
+.content {
+  @include pad;
+  
+  flex: 1;
 }
