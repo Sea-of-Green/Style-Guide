@@ -1,5 +1,5 @@
 ---
-title: Visual Style
+title: Visuals
 slug: visuals
 children: visuals
 layout: collection.jade

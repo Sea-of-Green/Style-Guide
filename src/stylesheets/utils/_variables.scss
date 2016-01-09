@@ -96,6 +96,11 @@ $symbol: 'Font Awesome', FontAwesome;
 $gutter: $base-font-size !global;
 $max-width: $measure !global;
 
+// NAV SETTINGS
+// ============
+
+$nav-width: rem(350);
+
 // ============
 // LISTS & MAPS
 // ============
@@ -127,8 +132,8 @@ $zindex: (
   content: -100,
 
   nav: 1000,
-  nav__content: 1010,
-  nav__bar: 1020,
+
+  footer: 1100
 );
 
 // FONTS

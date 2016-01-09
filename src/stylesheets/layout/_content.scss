@@ -23,20 +23,13 @@
 */
 
 .container {
-  display: flex;
-
-  width: 100%;
-  min-height: 100vh;
-}
-
-.nav {
-  flex: 0 1 auto;
-
-  width: rem(350);
+  @include respond-to(medium) {
+    width: calc(100% - #{$nav-width});
+    margin-right: 0;
+    margin-left: auto;
+  }
 }
 
 .content {
   @include pad;
-  
-  flex: 1;
 }

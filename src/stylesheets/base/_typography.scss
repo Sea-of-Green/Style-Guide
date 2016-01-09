@@ -6,10 +6,16 @@
 // BODY TEXT & HEADERS
 // ===================
 
+html {
+  font-size: 12px;
+  @include respond-to(small) {
+    font-size: $base-font-size;
+  }
+}
 html, body {
   @include font(body-text);
 
-  font-size: $base-font-size;
+  // font-size: $base-font-size;
   line-height: $base-line-height;
 
   color: $black;

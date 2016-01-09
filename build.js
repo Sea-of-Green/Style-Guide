@@ -39,16 +39,16 @@ Metalsmith(__dirname)
       pattern: '*.md'
     }
   }))
-  .use(layouts({
-    engine: 'jade',
-    directory: 'templates',
-    default: 'default.jade',
-    pattern: '**/*.md'
-  }))
   .use(markdown({
     gfm: true,
     smartypants: true,
     tables: true
+  }))
+  .use(layouts({
+    engine: 'jade',
+    directory: 'templates',
+    default: 'default.jade',
+    pattern: '**/*.html'
   }))
   .use(permalinks({
     pattern: ':collection/:slug',

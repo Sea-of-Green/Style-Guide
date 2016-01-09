@@ -9,24 +9,24 @@ While a brand is more than its logo, the logo is often the lynchpin of the brand
 
 A plant needs three things to grow: water, earth, and light. The flower icon in Sea of Green's logo is both comprised of and representative of these elements. The icon's colors were carefully, if obviously, chosen to drive that representation home -- yellow for light, green for earth, blue for water.
 
-![The icon.](/images/2-logo_icon.png)
+![The icon.](/images/logo_logo-icon.png)
 
 ### The Logotype
 
 Like the rest of the Sea of Green brand, the logotype is warm, welcoming, rational, and just a little bit quirky. The shapes of the letterforms were chosen to match the shapes of the icon. The color should always match the water (or sea) of the icon.
 
-![The logotype.](/images/2-logo_type.png)
+![The logotype.](/images/logo_logo-type.png)
 
 ## Logo Lockups
 
 A lockup is a specific way of arranging (or composing) seperate elements to fit a whole. The Sea of Green logo has two distinct lockups: a horizontal lockup that is the main way the logo is represented, and an alternate block lockup ("blockup") that is used when horizontal space is limited. In addition, the icon and logotype may occassionally be used on their own.
 
-![The horizontal lockup.](/images/2-logo_wide.png)
+![The horizontal lockup.](/images/logo_logo-wide.png)
 
-![The blockup.](/images/2-logo_block.png)
+![The blockup.](/images/logo_logo-block.png)
 
 ## Spacing
 
 The first thing we should respect when using the Sea of Green logo is the space around the logo. As the single most recognizable element of the brand, it’s important that it is seen as a visually distinct element on the page. In the diagram below, the minimum acceptable buffer margin surrounding each logo lockup is highlighted. All measurements are relative to the size of the logo, so it should be fairly easy to eyeball.
 
-![Spacing logo elements.](/images/2-logo_spacing.png)
+![Spacing logo elements.](/images/logo_logo-spacing.png)
