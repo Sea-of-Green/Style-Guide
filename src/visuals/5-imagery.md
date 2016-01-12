@@ -56,8 +56,8 @@ Sea of Green uses a few specific rules for illustration. All illustration should
 
 #### Solid Illustration
 
-![Solid-shape illustration of various CO2 generation methods](/images/6-solid-illustration.png)
+![Solid-shape illustration of various CO2 generation methods](/images/imagery_solid-illustration.png)
 
 #### Illustration with Texture
 
-![Textured illustration](/images/6-texture-illustration.png)
+![Textured illustration](/images/imagery_texture-illustration.png)

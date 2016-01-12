@@ -2,9 +2,9 @@ doctype html
 html
   head
     include partials/_head.jade
-  body
+  body.style-guide
+    include partials/_nav.jade
     .container
-      include partials/_nav.jade
 
       main(role="main", class="content")
 
@@ -15,5 +15,5 @@ html
           h1 Oops!
           p Looks like we've misplaced something. <a href="/">Head Home</a>?
 
-    include partials/_footer.jade
+      include partials/_footer.jade
     include partials/_scripts.jade

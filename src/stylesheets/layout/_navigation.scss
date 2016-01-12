@@ -2,50 +2,75 @@
 // This file contains styles that are specific to the navigation.
 // -----------------------------------------------------------------------------
 
+.toggle {
+  text-align: center;
+
+  cursor: pointer;
+
+  @include respond-to(large) {
+    display: none;
+  }
+
+  @include on-event {
+    .toggle__button {
+      color: $blue;
+    }
+  }
+
+  &__button {
+    margin: $h3-line-height 0;
+
+    font-size: $h3-font-size;
+  }
+
+  &__title {
+    display: inline;
+
+    margin-left: $gutter;
+  }
+}
 .nav {
   @include pad;
+  @include position(fixed, 0 null 0 (-$nav-width));
+  @include respond-to(large) {
+    left: 0;
+  }
 
   overflow-x: hidden;
 
   z-index: z(nav);
 
-  width: 100%;
+  width: $nav-width;
+  height: 100vh;
 
-  @include respond-to(medium) {
-    @include position(fixed, 0 null 0 0);
+  background: $gray-1;
 
-    width: $nav-width;
+  transition: left 0.3s cubic-bezier(.4,.2,.2,1.25);
 
-    background: $gray-1;
+  &--open {
+    left: 0;
+
+    & + .container {
+      cursor: zoom-out;
+    }
+  }
+
+  &__header {
+    display: none;
+    @include respond-to(large) {
+      display: block;
+    }
+  }
+
+  &__title {
+    text-align: center;
   }
 
   &__links {
+    margin: 0;
+    padding: 0;
 
-    &--parent {
-      display: flex;
-      flex-flow: row nowrap;
-
-      li {
-        flex: 1;
-      }
-    }
-    &--child {
-      display: none;
-    }
-    
-    @include respond-to(medium) {
-      margin: 0;
-      padding: 0;
-
-      list-style-type: none;
-
-      &--parent {
-        display: inline-block;
-      }
-      &--child {
-        display: inline-block;
-      }
-    }
+    list-style-type: none;
   }
   &__link {
 
@@ -56,6 +81,14 @@
 
       &:not(:first-child) {
         margin-top: $h3-line-height * 0.25;
+      }
+
+      &:first-child {
+        margin-top: 0;
+
+        @include respond-to(large) {
+          margin-top: $h4-line-height;
+        }
       }
 
       a, a:visited {

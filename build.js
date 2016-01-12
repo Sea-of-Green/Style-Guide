@@ -11,6 +11,8 @@ var prefix      = require('metalsmith-autoprefixer');
 var bourbon     = require('node-neat').includePaths;
 // JS
 var uglify     = require('metalsmith-uglify');
+// IMAGES
+var imagemin   = require('metalsmith-imagemin');
 
 Metalsmith(__dirname)
   .source('src')
@@ -27,6 +29,8 @@ Metalsmith(__dirname)
     concat: 'js/main.js',
     removeOriginal: true
     }))
+  // IMAGES
+  .use(imagemin())
   // HTML
   .use(collections({
     visuals: {

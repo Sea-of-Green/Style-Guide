@@ -1,29 +1,16 @@
-/*
 .style-guide {
   position: relative;
   left: 0;
 
-  transition: left 0.3s cubic-bezier(0.4, 0.2, 0.2, 1.25);
+  transition: left 0.3s cubic-bezier(.4,.2,.2,1.25);
 
-  &--closed {
+  &--nav {
     left: $nav-width;
-
-    overflow-y: hidden;
   }
 }
 
-.content {
-  @include outer-container;
-
-  padding: 0 $gutter;
-  margin-top: $nav-height + $base-line-height;
-
-  z-index: z(content);
-}
-*/
-
 .container {
-  @include respond-to(medium) {
+  @include respond-to(large) {
     width: calc(100% - #{$nav-width});
     margin-right: 0;
     margin-left: auto;
@@ -32,4 +19,6 @@
 
 .content {
   @include pad;
+
+  margin: 0 auto;
 }
