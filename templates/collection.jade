@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    include partials/_head.jade
+  body.style-guide
+    include partials/_nav.jade
+    .container
+
+      main(role="main", class="content")
+        h1= title
+        if contents
+          section!= contents
+        if collection
+          h3 Contents:
+          each collection, title in collections
+            if title == children
+              ul
+                for post in collection
+                  li
+                    a(href="/#{title}/#{post.slug}")= post.title
+        else
+          p Oops! There's nothing here. <a href="/">Go home</a>?
+
+      include partials/_footer.jade
+    include partials/_scripts.jade

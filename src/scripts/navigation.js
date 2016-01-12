@@ -1,27 +1,23 @@
-// Initialize smoothScroll
-smoothScroll.init();
+var toggle = $('.toggle');
+var guide = $('.style-guide');
+var nav = $('.nav');
+var container = $('.container');
 
-// Navigation
-var nav       = $('.nav');
-var navButton = $('.nav__button');
-var content   = $('.style-guide');
-var navLinks  = $$('.nav__link a');
-
-var toggleNav = function () {
-  // Toggle links
+toggle.addEventListener('click', function() {
+  guide.classList.toggle('style-guide--nav');
   nav.classList.toggle('nav--open');
-  // Move content
-  content.classList.toggle('style-guide--closed');
-};
-
-// Toggle navigation when hamburger button is clicked
-navButton.addEventListener( 'click', function () {
-  toggleNav();
 });
 
-// Toggle navigation when navigation link is clicked
-for ( i =0; i < navLinks.length; i++ ) {
-  navLinks[i].addEventListener( 'click', function () {
-    toggleNav();
-  });
-}
+container.addEventListener('click', function() {
+  if ( guide.classList.contains('style-guide--nav') ) {
+    guide.classList.remove('style-guide--nav');
+    nav.classList.remove('nav--open');
+  }
+});
+
+window.addEventListener('resize', function() {
+  if ( window.matchMedia('(min-width: 64rem)').matches && guide.classList.contains('style-guide--nav') ) {
+    guide.classList.remove('style-guide--nav');
+    nav.classList.remove('nav--open');
+  }
+});

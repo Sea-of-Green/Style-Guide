@@ -2,97 +2,101 @@
 // This file contains styles that are specific to the navigation.
 // -----------------------------------------------------------------------------
 
-.nav {
-  z-index: z(nav);
+.toggle {
+  text-align: center;
 
-  &__bar {
-    @include fill-parent;
-    @include position(fixed, 0 0 null 0);
+  cursor: pointer;
 
-    height: $nav-height;
+  @include respond-to(large) {
+    display: none;
+  }
 
-    background: $blue;
-    color: $white;
-
-    z-index: z(nav__bar);
-
-    transition: left 0.3s cubic-bezier(0.4, 0.2, 0.2, 1.25);
+  @include on-event {
+    .toggle__button {
+      color: $blue;
+    }
   }
 
   &__button {
-    float: left;
+    margin: $h3-line-height 0;
 
-    width: $gutter + rem(45);
+    font-size: $h3-font-size;
+  }
+
+  &__title {
+    display: inline;
 
     margin-left: $gutter;
-    margin-top: $gutter;
-
-    cursor: pointer;
   }
-  &__button-line {
-    width: 45px;
-    height: 5px;
+}
+.nav {
+  @include pad;
+  @include position(fixed, 0 null 0 (-$nav-width));
+  @include respond-to(large) {
+    left: 0;
+  }
 
-    border-radius: 7px;
+  overflow-x: hidden;
 
-    background: $white;
+  z-index: z(nav);
 
-    transition: transform 0.4s cubic-bezier(0.75, -0.2, 0.2, 1.25), background 0.3s ease;
+  width: $nav-width;
+  height: 100vh;
 
-    &:not(:last-child) {
-      margin-bottom: 5px;
+  background: $gray-1;
+
+  transition: left 0.3s cubic-bezier(.4,.2,.2,1.25);
+
+  &--open {
+    left: 0;
+
+    & + .container {
+      cursor: zoom-out;
+    }
+  }
+
+  &__header {
+    display: none;
+    @include respond-to(large) {
+      display: block;
     }
   }
 
   &__title {
-    @extend h2;
-    @include outer-container($max-width - 2);
-
-    display: block;
-
-    margin-top: 0;
-
-    font-weight: 500;
-    color: $white;
+    text-align: center;
   }
 
-  &__content {
-    @include position(fixed, $nav-height 0 0 (-$nav-width) );
-
-    height: calc(100vh - #{$nav-height});
-    width: $nav-width;
-
-    padding: 0.75rem $gutter 0;
-
-    background: $gray-1;
-    // background: linear-gradient(to bottom, $blue $nav-height, $blue-5);
-
-    z-index: z(nav__content);
-
-    overflow-y: auto;
-
-    transition: left 0.3s cubic-bezier(0.4, 0.2, 0.2, 1.25);
-  }
-  &__list {
+  &__links {
     margin: 0;
-    padding:0;
+    padding: 0;
 
     list-style-type: none;
   }
   &__link {
 
-    &--1 {
-      @extend h3;
+    &--section {
+      @extend h4;
 
-      margin-bottom: $h3-line-height * 0.5;
-      margin-top: $h3-line-height * 0.5;
+      margin-bottom: $h3-line-height * 0.25;
+
+      &:not(:first-child) {
+        margin-top: $h3-line-height * 0.25;
+      }
+
+      &:first-child {
+        margin-top: 0;
+
+        @include respond-to(large) {
+          margin-top: $h4-line-height;
+        }
+      }
 
       a, a:visited {
         color: $black;
       }
     }
 
-    &--2 {
+    &--part {
       @include font(body-text);
 
       font-size: $base-font-size;
@@ -102,29 +106,5 @@
         color: $gray;
       }
     }
-  }
-}
-
-.nav--open {
-  .nav__bar {
-    // left: $nav-width;
-  }
-
-  .nav__button-line {
-    &:first-child {
-      background: $blue-1;
-
-      transform: rotateZ(135deg) translate(7px, -7px);
-    }
-    &:nth-child(2) {
-      transform: rotateY(90deg);
-    }
-    &:last-child {
-      transform: rotateZ(-135deg) translate(7px, 7px);
-    }
-  }
-
-  .nav__content {
-    left: 0;
   }
 }
