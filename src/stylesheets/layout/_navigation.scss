@@ -47,7 +47,7 @@
 
   transition: left 0.3s cubic-bezier(.4,.2,.2,1.25);
 
-  &--open {
+  &--is-open {
     left: 0;
 
     & + .container {
@@ -83,6 +83,14 @@
         margin-top: $h3-line-height * 0.25;
       }
 
+      @include respond-to(tiny) {
+        margin-bottom: $h3-line-height * 0.5;
+
+        &:not(:first-child) {
+          margin-top: $h3-line-height * 0.5;
+        }
+      }
+
       &:first-child {
         margin-top: 0;
 
@@ -101,6 +109,10 @@
 
       font-size: $base-font-size;
       line-height: $base-line-height;
+
+      @include respond-to(tiny) {
+        margin: $base-line-height*0.5 0;
+      }
 
       a, a:visited {
         color: $gray;

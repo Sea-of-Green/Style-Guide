@@ -4,7 +4,7 @@
 
   transition: left 0.3s cubic-bezier(.4,.2,.2,1.25);
 
-  &--nav {
+  &--is-closed {
     left: $nav-width;
   }
 }
@@ -19,6 +19,8 @@
 
 .content {
   @include pad;
+
+  max-width: $measure;
 
   margin: 0 auto;
 }

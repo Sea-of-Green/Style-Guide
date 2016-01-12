@@ -5,6 +5,8 @@ slug: product-descriptions
 
 Here are a few rules for formatting product descriptions. There is a little HTML, but don't worry! It's all very basic, and requires no programming knowledge whatsoever. It may be useful to use a special text editor (especially on Mac) like [Notepad++](https://notepad-plus-plus.org/) or [Atom](http://atom.io), but the default Notepad should be fine.
 
+The [Sea of Green website](http://sea-of-green.com) uses [CS-Cart](http://cs-cart.com) as our eCommerce CMS, with the [Redactor WYSIWYG editor](http://imperavi.com/redactor/) as the description editor by default. While this section of the guide will focus on HTML, most of the formatting options are possible using Redactor's GUI.
+
 ## General Rules
 
 ### Styling
