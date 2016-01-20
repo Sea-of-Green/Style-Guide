@@ -170,7 +170,6 @@ The blue, yellow, and green each have 5 shades, two lighter and two darker than 
       <code>#212620</code><br />
       <code>$black</code></span>
     </div>
-  </div>
 </section>
 
 ## Color Combinations

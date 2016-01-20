@@ -4,12 +4,16 @@ A living document that offers [Sea of Green](http://sea-of-green.com) employees 
 
 ***
 
-### How to Generate
-
-To generate a local version of the website, follow the steps below. It is recommended you set up a virtual host for best local viewing of the site.
+## How to Generate Locally
 
 1. Install [Node](http://nodejs.org) & [Metalsmith](http://metalsmith.io) globally.
-2. Clone repo to your computer.
-3. Open Terminal, and navigate to the clone: ```cd clone/folder/here```
+2. Clone this repo to your computer
+3. Open the command line (Terminal on Mac or cmd on Windows), and navigate to the clone: ```cd clone/folder/here```
 4. Run ```npm install``` (Note: this step may take a few minutes)
 5. Run ```node build.js```
+
+***
+
+## Contributing
+
+As this is a *living* style guide, contributions from Sea of Green employees are welcome & encouraged. For best practices and how-tos, view the [Contribution Guidelines](contributing.md).

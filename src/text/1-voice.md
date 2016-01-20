@@ -3,7 +3,7 @@ title: Copyrighting Voice
 slug: voice
 ---
 
-The Sea of Green voice should be friendly and knowledgeable. The writer should assume that the reader is a complete novice in gardening, but intelligent. Industry specific terms, abbreviations, and jargon should be avoided or explained. Explanations of techniques or scientific processes should not be overly technical, rather the writer should write about these processes in layman's terms. Referring to specific products is encouraged, as long as the product is mentioned in appropriate context (and linked to our store!).
+The Sea of Green voice should be friendly and knowledgeable. The writer should assume that the reader is a complete novice in gardening, but intelligent. Industry specific terms, abbreviations, and jargon should be avoided or explained. Explanations of techniques or scientific processes should not be overly technical, rather the writer should write about these processes in layman's terms. Referring to specific products is encouraged, as long as the product is mentioned in appropriate context (and linked to [our store](http://sea-of-green.com)!). In addition, all text should be addressed from [the first-person plural to the second-person singular](https://en.wikipedia.org/wiki/Grammatical_person) (e.g., **we** recommend x to **you**).
 
 ### Examples
 
