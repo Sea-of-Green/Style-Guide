@@ -16,4 +16,4 @@ A living document that offers [Sea of Green](http://sea-of-green.com) employees 
 
 ## Contributing
 
-As this is a *living* style guide, contributions from Sea of Green employees are welcome & encouraged. For best practices and how-tos, view the [Contribution Guidelines](contributing.md).
+As this is a *living* style guide, contributions from Sea of Green employees are welcome & encouraged. For best practices and how-tos, view the [Contribution Guidelines](CONTRIBUTING.md).
