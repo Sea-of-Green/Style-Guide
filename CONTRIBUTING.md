@@ -51,7 +51,7 @@ An exception can be made for ```@media``` queries (or the ```respond-to``` mixin
   height: 200px;
   width: 500px;
   @include respond-to(medium) {
-    display: absolute;
+    position: absolute;
 
     padding: $gutter * 2;
   }
@@ -71,7 +71,7 @@ An exception can be made for ```@media``` queries (or the ```respond-to``` mixin
   margin: 0 auto;
 
   @include respond-to(medium) {
-    display: absolute;
+    position: absolute;
     top: 10px;
 
     padding: $gutter * 2;
